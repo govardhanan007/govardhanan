@@ -228,10 +228,16 @@ html[data-theme="dark"] .site-footer{background:#020914;border-top:1px solid var
 .footer-brand p{color:#B0BED6;margin-top:8px;font-size:.95rem}
 .footer-quote{font-style:italic;color:#F0D9B0;border-left:2px solid var(--gold);padding-left:14px;margin-top:20px;font-size:.95rem}
 .footer-nav,.footer-contact{list-style:none;padding:0;margin:0;display:grid;gap:10px;font-size:.92rem}
-.footer-social{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
-.footer-social a{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;background:rgba(255,255,255,.06);color:#fff;transition:background .2s ease}
-.footer-social a:hover{background:rgba(255,255,255,.15)}
-.footer-social svg{width:18px;height:18px}
+.footer-social{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.footer-social a{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;transition:transform .2s ease,box-shadow .2s ease;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.footer-social a:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.35)}
+.footer-social svg{width:22px;height:22px;display:block}
+.footer-social a[data-brand="linkedin"]{background:#0A66C2}
+.footer-social a[data-brand="x"]{background:#000}
+.footer-social a[data-brand="instagram"]{background:transparent}
+.footer-social a[data-brand="instagram"] svg{width:38px;height:38px;border-radius:10px}
+.footer-social a[data-brand="whatsapp"]{background:#25D366}
+.footer-social a[data-brand="telegram"]{background:linear-gradient(180deg,#37AEE2,#1E96C8)}
 .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#94A3BE;font-size:.85rem}
 
 /* Focus */
