@@ -181,14 +181,40 @@ html[data-theme="dark"] .theme-toggle .moon{display:none}
 .tile img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .tile:hover img{transform:scale(1.06)}
 
-/* Connect */
-.connect-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+/* Connect — Play Store style branded app tiles */
+.connect-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
 @media (max-width:900px){.connect-grid{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:480px){.connect-grid{grid-template-columns:repeat(2,1fr)}}
-.connect-tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:22px 14px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);color:var(--text);transition:all .2s ease;min-height:110px}
-.connect-tile:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--accent);color:var(--accent);text-decoration:none}
-.connect-tile svg{width:26px;height:26px}
-.connect-tile span{font-size:.85rem;font-weight:500}
+@media (max-width:480px){.connect-grid{grid-template-columns:repeat(3,1fr);gap:12px}}
+.connect-tile{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:12px;padding:20px 12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);color:var(--text);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;min-height:130px;text-decoration:none}
+.connect-tile:hover{transform:translateY(-4px);box-shadow:var(--shadow);text-decoration:none;color:var(--text)}
+.connect-tile .badge{width:56px;height:56px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,.14),inset 0 1px 0 rgba(255,255,255,.18);transition:transform .25s ease;flex:none}
+.connect-tile:hover .badge{transform:scale(1.06) rotate(-2deg)}
+.connect-tile .badge svg{width:34px;height:34px;display:block}
+.connect-tile .label{font-size:.86rem;font-weight:600;color:var(--text);text-align:center;line-height:1.2}
+
+/* Brand backgrounds */
+.connect-tile[data-brand="linkedin"] .badge{background:#0A66C2}
+.connect-tile[data-brand="instagram"] .badge{background:transparent;box-shadow:0 4px 10px rgba(214,41,118,.35)}
+.connect-tile[data-brand="instagram"] .badge svg{width:56px;height:56px;border-radius:14px}
+.connect-tile[data-brand="facebook"] .badge{background:#1877F2}
+.connect-tile[data-brand="x"] .badge{background:#000}
+.connect-tile[data-brand="whatsapp"] .badge{background:#25D366}
+.connect-tile[data-brand="telegram"] .badge{background:linear-gradient(180deg,#37AEE2,#1E96C8)}
+.connect-tile[data-brand="gmail"] .badge{background:#fff;border:1px solid #eaeaea}
+.connect-tile[data-brand="phone"] .badge{background:linear-gradient(180deg,#34C759,#2FA84F)}
+.connect-tile[data-brand="website"] .badge{background:linear-gradient(180deg,#0A2540,#123B6B)}
+
+/* Hover border tint per brand */
+.connect-tile[data-brand="linkedin"]:hover{border-color:#0A66C2}
+.connect-tile[data-brand="instagram"]:hover{border-color:#D62976}
+.connect-tile[data-brand="facebook"]:hover{border-color:#1877F2}
+.connect-tile[data-brand="x"]:hover{border-color:#000}
+html[data-theme="dark"] .connect-tile[data-brand="x"]:hover{border-color:#fff}
+.connect-tile[data-brand="whatsapp"]:hover{border-color:#25D366}
+.connect-tile[data-brand="telegram"]:hover{border-color:#37AEE2}
+.connect-tile[data-brand="gmail"]:hover{border-color:#EA4335}
+.connect-tile[data-brand="phone"]:hover{border-color:#34C759}
+.connect-tile[data-brand="website"]:hover{border-color:var(--navy)}
 
 /* Footer */
 .site-footer{background:var(--navy);color:#DCE5F1;padding:56px 0 28px;margin-top:40px}
