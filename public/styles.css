@@ -15,7 +15,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
   --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 html[data-theme="dark"]{
-  --bg:#05101F;--surface:#0B1B31;--surface-alt:#0E2murky;--surface-alt:#0E2340;
+  --bg:#05101F;--surface:#0B1B31;--surface-alt:#0E2340;
   --text:#EAF0FA;--text-soft:#9AA9C0;--border:rgba(255,255,255,.08);
   --navy:#EAF0FA;--accent:#5FA3FF;--accent-2:#84BDFF;
   --shadow:0 10px 30px rgba(0,0,0,.45);--shadow-lg:0 30px 80px rgba(0,0,0,.55);
