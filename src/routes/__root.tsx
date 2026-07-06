@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Govardhanan P — Portfolio" },
-      { name: "description", content: "Portfolio of Govardhanan P — MBA General Student & Mechanical Engineer." },
+      { title: "Govardhanan P — MBA General Student & Mechanical Engineer" },
+      { name: "description", content: "Portfolio of Govardhanan P — MBA General student and Mechanical Engineer focused on leadership, strategy, marketing, sales, HR and business innovation." },
       { name: "author", content: "Govardhanan P" },
       { property: "og:site_name", content: "Govardhanan P" },
-      { property: "og:title", content: "Govardhanan P — Portfolio" },
-      { property: "og:description", content: "Leadership • Strategy • Innovation • Growth." },
+      { property: "og:title", content: "Govardhanan P — MBA General Student & Mechanical Engineer" },
+      { property: "og:description", content: "Portfolio of Govardhanan P — MBA General student and Mechanical Engineer focused on leadership, strategy, marketing, sales, HR and business innovation." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Govardhanan P — MBA General Student & Mechanical Engineer" },
+      { name: "twitter:description", content: "Portfolio of Govardhanan P — MBA General student and Mechanical Engineer focused on leadership, strategy, marketing, sales, HR and business innovation." },
+      { property: "og:image", content: "https://govardhanan.com/assets/photo.jpg" },
+      { name: "twitter:image", content: "https://govardhanan.com/assets/photo.jpg" },
     ],
     links: [
       {
