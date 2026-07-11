@@ -172,7 +172,8 @@ html[data-theme="dark"] .theme-toggle .moon{display:none}
 .resume-card h3{margin:0 0 4px}
 .resume-card .meta{color:var(--text-soft);font-size:.92rem;margin:0}
 .resume-card .meta a{color:var(--text-soft)}
-@media (max-width:720px){.resume-card{grid-template-columns:1fr;text-align:center;justify-items:center}.resume-card .avatar{margin:0 auto}}
+.resume-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+@media (max-width:720px){.resume-card{grid-template-columns:1fr;text-align:center;justify-items:center}.resume-card .avatar{margin:0 auto}.resume-actions{justify-content:center}}
 
 /* Gallery */
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
