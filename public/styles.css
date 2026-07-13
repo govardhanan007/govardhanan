@@ -116,8 +116,7 @@ html[data-theme="dark"] .theme-toggle .moon{display:none}
 .card .meta{color:var(--text-soft);font-size:.88rem}
 
 /* About */
-.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
-@media (max-width:860px){.about-grid{grid-template-columns:1fr}}
+.about-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
 .about-portrait{border-radius:20px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);aspect-ratio:4/5;background:var(--surface-alt);max-width:420px}
 .about-portrait img{width:100%;height:100%;object-fit:cover;filter:contrast(1.03) saturate(1.03)}
 .about-portrait .placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:var(--text-soft)}
@@ -165,7 +164,7 @@ html[data-theme="dark"] .theme-toggle .moon{display:none}
 .vision-card p{margin:0;color:var(--text-soft);font-size:.95rem}
 
 /* Resume */
-.resume-card{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
+.resume-card{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
 .resume-card .avatar{width:96px;height:96px;border-radius:50%;overflow:hidden;background:var(--surface-alt);border:1px solid var(--border);flex:none}
 .resume-card .avatar img{width:100%;height:100%;object-fit:cover;filter:contrast(1.03) saturate(1.03)}
 .resume-card .avatar .placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:var(--text-soft)}
