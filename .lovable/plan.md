@@ -1,43 +1,33 @@
-## Goals
+## Scope
+Only the Skills section in `public/index.html` (lines 180-200) and matching styles in `public/styles.css`. No changes to hero, about, resume, footer or global tokens.
 
-1. Resume must be viewable and downloadable by anyone — no login, no signup.
-2. Your photo should appear only once on the page (currently it shows in three places: hero, About, and Resume card).
+## Content changes (public/index.html)
+- Subtitle: "Capabilities I am building" → **"Core Skills & Professional Competencies"**.
+- Intro paragraph: tighten to one line — "A blend of human resources, business, engineering and interpersonal strengths."
+- Replace the flat 11-card list with **5 category groups**, each rendered as a subsection with a category heading and its own responsive card grid:
+  1. **Human Resources** — Recruitment, Employee Relations, HR Operations
+  2. **Business & Management** — Business Management, Operations Management, Project Coordination
+  3. **Technical** — CAD, CAM, Tool Engineering, Digital Manufacturing
+  4. **Software** — Microsoft Excel, Microsoft PowerPoint, Microsoft Word
+  5. **Professional Skills** — Leadership, Communication, Teamwork, Problem Solving, Time Management, Critical Thinking, Adaptability, Continuous Learning
+- Each card: inline SVG icon (reuse the site's existing icon style, monochrome stroke) + skill name + one-line description. Existing `.skill-card` class stays; add `.desc` line and a category-specific icon per card.
 
-## What's actually happening with the resume
+## Layout & style (public/styles.css)
+- Introduce `.skills-groups` (grid, gap 32px) and `.skill-group` (heading + inner grid). Reduces empty space by packing categories tightly instead of one giant 3-col grid with orphan rows.
+- Category heading: small, uppercase, `--accent` colored eyebrow-style label with a thin divider line to the right.
+- Inner grid: `repeat(auto-fill,minmax(220px,1fr))` — automatically fills 2 cols on mobile-lg, 3 on tablet, 4 on desktop; equal-height cards via `align-items:stretch` and `display:flex;flex-direction:column` on `.skill-card`.
+- Card: keep current rounded corners, soft shadow, left accent bar hover animation; add `min-height` for consistency, add `.skill-card .desc` (small muted one-liner, `font-size:.85rem`, `color:var(--text-soft)`).
+- Section padding: keep current `clamp(56px,8vw,104px)` but reduce `.section-head` bottom margin from 40px to 28px within Skills only (scoped via `#skills .section-head`).
+- Keep `.reveal` scroll-in animation already wired in `script.js`.
 
-The resume PDF is already public at `/assets/resume.pdf` and the buttons (Download Resume / View Resume) link straight to it. Anyone opening the published site can click and get the file — no auth in the code path.
-
-The reason it *feels* gated is that you're testing on the **preview URL** (`id-preview--…lovable.app`), which requires a Lovable login by design. To make the resume (and the whole site) reachable with zero login:
-
-- Confirm publish visibility is **Public** (Project settings → Publish). If it's Private, only workspace members can view.
-- Share the **published URL** (`https://govardhanana.lovable.app`) or your custom domain `govardhanan.com` once it's connected — not the preview URL.
-
-I'll check publish visibility after you approve and flip it to Public if needed (that step needs your approval).
-
-## Photo — reduce to one
-
-Currently `/assets/photo.jpg` is rendered in three places in `public/index.html`:
-
-- Line 112 — Hero portrait (large, top of page)
-- Line 125 — About section portrait
-- Line 277 — Resume card avatar
-
-Plan: **keep only the Hero portrait** (line 112). Remove the About portrait and the Resume-card avatar, and adjust the two affected sections so the layout still looks right:
-
-- About section becomes a single-column text block (drop `.about-portrait`, tighten `.about-grid` in `styles.css` to one column).
-- Resume card drops the small avatar and centers the heading + action buttons.
-
-Meta tags (`og:image`, `twitter:image`, JSON-LD `image`) still reference `photo.jpg` — those are for link previews on WhatsApp / LinkedIn etc., not visible on the page, so they stay.
+## Responsive
+- ≥1100px: 4 cards per row inside each group
+- 700–1099px: 3 per row
+- 480–699px: 2 per row
+- <480px: 2 per row for short names, gracefully 1 if content overflows (auto-fill handles it)
 
 ## Files touched
+- `public/index.html` — replace lines 180-200 block
+- `public/styles.css` — extend `.skill-card` rules, add `.skills-groups`, `.skill-group`, `.group-title`
 
-- `public/index.html` — remove two `<img>` blocks and their wrappers
-- `public/styles.css` — collapse `.about-grid` to one column, adjust `.resume-card` spacing
-
-## Verification
-
-- Load the preview, confirm exactly one photo renders on the page.
-- Click **Download Resume** and **View Resume** — PDF opens / downloads with no auth prompt on the published site.
-- Check publish visibility is Public.
-
-Nothing else changes — resume file, links, and content stay as-is.
+No JS changes needed (existing IntersectionObserver picks up `.reveal`).
