@@ -166,6 +166,18 @@ html[data-theme="dark"] .theme-toggle .moon{display:none}
 .skill-grid .skill-card{display:flex;flex-direction:column;min-height:150px}
 @media (max-width:520px){.skill-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.skill-grid .skill-card{padding:16px;min-height:130px}}
 
+/* Certificates */
+.cert-grid{display:grid;gap:16px}
+.cert-card{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);transition:all .25s ease}
+.cert-card:hover{border-color:var(--navy);box-shadow:var(--shadow)}
+.cert-main{display:flex;align-items:flex-start;gap:18px;flex:1}
+.cert-card .ico{width:48px;height:48px;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;background:linear-gradient(135deg,rgba(30,95,191,.12),rgba(183,147,90,.12));color:var(--accent);flex:none}
+.cert-card .ico svg{width:26px;height:26px;display:block}
+.cert-info h3{margin:0 0 4px;font-size:1.1rem}
+.cert-issuer{color:var(--text-soft);font-size:.95rem;margin:0}
+.cert-btn{flex:none}
+@media (max-width:640px){.cert-card{flex-direction:column;align-items:flex-start;gap:18px}.cert-main{align-items:flex-start}.cert-btn{width:100%;justify-content:center}}
+
 /* Project */
 .project-card{padding:32px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
 .project-card h3{font-size:1.4rem;margin-bottom:6px}
