@@ -167,16 +167,33 @@ html[data-theme="dark"] .theme-toggle .moon{display:none}
 @media (max-width:520px){.skill-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.skill-grid .skill-card{padding:16px;min-height:130px}}
 
 /* Certificates */
-.cert-grid{display:grid;gap:16px}
-.cert-card{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);transition:all .25s ease}
-.cert-card:hover{border-color:var(--navy);box-shadow:var(--shadow)}
-.cert-main{display:flex;align-items:flex-start;gap:18px;flex:1}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;align-items:stretch}
+.cert-card{display:flex;flex-direction:column;align-items:flex-start;gap:18px;padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);transition:all .25s ease;height:100%}
+.cert-card:hover{border-color:var(--navy);box-shadow:var(--shadow);transform:translateY(-2px)}
+.cert-top{display:flex;align-items:flex-start;gap:16px;width:100%}
 .cert-card .ico{width:48px;height:48px;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;background:linear-gradient(135deg,rgba(30,95,191,.12),rgba(183,147,90,.12));color:var(--accent);flex:none}
 .cert-card .ico svg{width:26px;height:26px;display:block}
-.cert-info h3{margin:0 0 4px;font-size:1.1rem}
-.cert-issuer{color:var(--text-soft);font-size:.95rem;margin:0}
-.cert-btn{flex:none}
-@media (max-width:640px){.cert-card{flex-direction:column;align-items:flex-start;gap:18px}.cert-main{align-items:flex-start}.cert-btn{width:100%;justify-content:center}}
+.cert-info h3{margin:0 0 4px;font-size:1.05rem;line-height:1.35}
+.cert-issuer{color:var(--text-soft);font-size:.92rem;margin:0}
+.cert-btn{margin-top:auto;align-self:flex-start}
+
+/* Featured specialization certificate */
+.cert-featured{grid-column:1 / -1;position:relative;flex-direction:row;align-items:center;gap:24px;border-color:color-mix(in oklab,var(--accent) 45%,var(--border));background:linear-gradient(135deg,var(--surface),color-mix(in oklab,var(--accent) 6%,var(--surface)));box-shadow:var(--shadow-sm)}
+.cert-featured::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--accent),var(--gold));border-radius:var(--radius) 0 0 var(--radius)}
+.cert-featured .featured-badge{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);background:color-mix(in oklab,var(--accent) 10%,var(--surface));padding:4px 10px;border-radius:999px;margin-bottom:6px}
+.cert-featured .featured-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.cert-featured .cert-info h3{font-size:1.2rem}
+.cert-featured .cert-btn{align-self:center;margin-top:0}
+
+@media (max-width:760px){
+  .cert-featured{flex-direction:column;align-items:flex-start}
+  .cert-featured .cert-btn{align-self:stretch;justify-content:center;margin-top:auto}
+}
+@media (max-width:640px){
+  .cert-grid{grid-template-columns:1fr}
+  .cert-card{padding:20px}
+  .cert-btn{width:100%;justify-content:center}
+}
 
 /* Project */
 .project-card{padding:32px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
