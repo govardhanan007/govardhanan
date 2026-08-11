@@ -70,15 +70,20 @@
     reveals.forEach(function (el) { el.classList.add("in"); });
   }
 
-  // ---------- Resume availability ----------
-  // If /assets/resume.pdf exists, enable all download-resume links.
-  fetch("/assets/resume.pdf", { method: "HEAD" }).then(function (r) {
-    if (r && r.ok) {
-      document.querySelectorAll("[data-resume]").forEach(function (a) {
-        a.removeAttribute("aria-disabled");
-        a.removeAttribute("tabindex");
-        a.removeAttribute("title");
-      });
+  // ---------- Resume ----------
+  // The resume PDF ships with the site, so links are always enabled.
+  // Any legacy disabled state left in cached markup is cleared here.
+  document.querySelectorAll("[data-resume][aria-disabled]").forEach(function (a) {
+    a.removeAttribute("aria-disabled");
+    a.removeAttribute("tabindex");
+    a.removeAttribute("title");
+  });
+
+  // ---------- Close mobile nav on outside click / Escape ----------
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && nav && nav.classList.contains("open")) {
+      nav.classList.remove("open");
+      if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
     }
-  }).catch(function () {});
+  });
 })();
