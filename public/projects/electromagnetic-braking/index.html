@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0A2540" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#05101F" media="(prefers-color-scheme: dark)" />
+
+  <title>Eddy Current Brake: Automatic Electromagnetic Braking System Case Study</title>
+  <meta name="description" content="How an eddy current brake works — a technical case study of an automatic electromagnetic braking system built with an electromagnet, steel disc, ultrasonic sensing and an Arduino controller." />
+  <meta name="author" content="Govardhanan P" />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="canonical" href="https://govardhanan.com/projects/electromagnetic-braking" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Govardhanan P" />
+  <meta property="og:title" content="Eddy Current Brake: Automatic Electromagnetic Braking System Case Study" />
+  <meta property="og:description" content="Working principle, circuit layout, methodology and results of a contactless eddy current braking prototype." />
+  <meta property="og:url" content="https://govardhanan.com/projects/electromagnetic-braking" />
+  <meta property="og:image" content="https://govardhanan.com/assets/photo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@Govardhanan007" />
+  <meta name="twitter:title" content="Eddy Current Brake: Automatic Electromagnetic Braking System Case Study" />
+  <meta name="twitter:description" content="Working principle, circuit layout, methodology and results of a contactless eddy current braking prototype." />
+  <meta name="twitter:image" content="https://govardhanan.com/assets/photo.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Eddy Current Brake: Automatic Electromagnetic Braking System",
+    "about": "Eddy current brake",
+    "url": "https://govardhanan.com/projects/electromagnetic-braking",
+    "author": { "@type": "Person", "name": "Govardhanan P", "url": "https://govardhanan.com" },
+    "publisher": { "@type": "Person", "name": "Govardhanan P" },
+    "image": "https://govardhanan.com/assets/photo.jpg"
+  }
+  </script>
+
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="Govardhanan P — Home">Govardhanan P<span class="dot">.</span></a>
+      <nav id="primary-nav" class="nav-links" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/#projects">Projects</a>
+        <a href="/#certifications">Certifications</a>
+        <a href="/#resume">Resume</a>
+        <a href="/#connect">Connect</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+          <svg class="moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" aria-labelledby="case-title">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/#projects">Projects</a> <span aria-hidden="true">/</span> <span>Eddy current brake</span>
+        </nav>
+        <div class="section-head">
+          <span class="eyebrow">Project case study</span>
+          <h1 id="case-title">Eddy current brake — automatic electromagnetic braking system</h1>
+          <p>A mechanical engineering project by Govardhanan P exploring frictionless, sensor-driven vehicle braking using electromagnetism.</p>
+        </div>
+
+        <article class="project-card">
+          <h2>What is an eddy current brake?</h2>
+          <p>An eddy current brake slows a moving metal part without touching it. When a conductive disc or rail passes through a magnetic field, the changing flux induces circulating currents — eddy currents — inside the metal. By Lenz's law those currents create their own magnetic field opposing the motion, so the disc feels a retarding force. Because nothing rubs, there are no pads to wear out; the kinetic energy leaves as heat spread through the disc itself.</p>
+          <p>The braking force grows with speed, which makes eddy current braking excellent for high-speed retardation and progressive slowing, and it is why the technique is already used on trains, roller coasters and heavy-vehicle retarders. It cannot hold a vehicle at standstill, so in real systems it complements rather than replaces a friction brake.</p>
+
+          <h2>Problem statement</h2>
+          <p>Conventional friction brakes suffer from pad wear, heat build-up and delayed reaction time in emergency scenarios. Under repeated hard braking they fade, and the driver's reaction time still dominates the total stopping distance.</p>
+
+          <h2>Objective</h2>
+          <p>Design and demonstrate a contactless braking mechanism that reacts automatically to an obstacle, reducing stopping distance and mechanical wear.</p>
+
+          <h2>Working principle</h2>
+          <p>An electromagnet is mounted with a small air gap next to a rotating mild-steel disc. When the coil is energised, the disc rotating through the field develops eddy currents; the induced field opposes rotation and the disc decelerates without physical contact. Braking torque depends on coil current (field strength), the air gap, disc conductivity and thickness, and the rotational speed of the disc.</p>
+
+          <h2>System layout</h2>
+          <pre class="schematic" aria-label="Block diagram of the braking system">
+ [Ultrasonic / IR sensor]
+            |
+            v
+   [Arduino microcontroller] --(PWM / digital signal)--> [Relay driver module]
+            |                                                    |
+      distance reading                                           v
+                                                       [Electromagnet coil]
+                                                                 |
+                                                        magnetic field across
+                                                            the air gap
+                                                                 v
+                                                    [Rotating mild-steel disc]
+                                                     -> eddy currents -> braking torque
+          </pre>
+
+          <h2>Methodology</h2>
+          <ol class="exp-list">
+            <li>Model the disc, coil mount and frame in AutoCAD and SolidWorks, fixing the air gap between the pole face and the disc.</li>
+            <li>Fabricate the frame, mount the disc on a driven shaft and align the electromagnet.</li>
+            <li>Wire the ultrasonic sensor, Arduino and relay driver to the electromagnet on a separate DC supply.</li>
+            <li>Program the controller to read distance continuously and energise the coil when an obstacle enters the trigger range, applying braking proportional to proximity.</li>
+            <li>Run the disc up to speed and record deceleration behaviour with and without the coil energised.</li>
+          </ol>
+
+          <h2>Components used</h2>
+          <ul class="exp-list">
+            <li>Electromagnet coil and mild-steel rotating disc</li>
+            <li>Arduino microcontroller board</li>
+            <li>Ultrasonic (and IR) obstacle sensor</li>
+            <li>Relay driver module and DC power supply</li>
+            <li>Fabricated shaft, bearings and frame; AutoCAD and SolidWorks for modelling</li>
+          </ul>
+
+          <h2>Results</h2>
+          <p>The bench prototype demonstrated automatic, contactless deceleration whenever an obstacle entered the sensor range: the controller energised the coil without driver input and the disc slowed smoothly, with the retarding effect strongest at higher disc speeds and reducing as the disc slowed — the expected behaviour of an eddy current brake. No contact surfaces were involved, so there was no pad wear across repeated test runs.</p>
+
+          <h2>Limitations</h2>
+          <ul class="exp-list">
+            <li>Braking force falls towards zero at low speed, so a friction brake is still needed to hold a stationary load.</li>
+            <li>All the kinetic energy becomes heat in the disc, so disc cooling limits continuous use.</li>
+            <li>The electromagnet needs a reliable electrical supply; a power failure removes braking.</li>
+          </ul>
+
+          <h2>Future scope</h2>
+          <p>Integration with ABS and ADAS sensing, regenerative recovery of the energy currently dissipated as heat, and adaptive braking curves based on vehicle speed and load.</p>
+
+          <div class="resume-actions" style="margin-top:1.5rem">
+            <a class="btn btn-primary" href="/#projects">Back to all projects</a>
+            <a class="btn btn-ghost" href="/#connect">Discuss this project</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span data-year>2026</span> Govardhanan P · <a href="/">govardhanan.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>
