@@ -10,33 +10,44 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProjectsElectromagneticBrakingRouteImport } from './routes/projects.electromagnetic-braking'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsElectromagneticBrakingRoute =
+  ProjectsElectromagneticBrakingRouteImport.update({
+    id: '/projects/electromagnetic-braking',
+    path: '/projects/electromagnetic-braking',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/projects/electromagnetic-braking': typeof ProjectsElectromagneticBrakingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/projects/electromagnetic-braking': typeof ProjectsElectromagneticBrakingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/projects/electromagnetic-braking': typeof ProjectsElectromagneticBrakingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/projects/electromagnetic-braking'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/projects/electromagnetic-braking'
+  id: '__root__' | '/' | '/projects/electromagnetic-braking'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ProjectsElectromagneticBrakingRoute: typeof ProjectsElectromagneticBrakingRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +59,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/electromagnetic-braking': {
+      id: '/projects/electromagnetic-braking'
+      path: '/projects/electromagnetic-braking'
+      fullPath: '/projects/electromagnetic-braking'
+      preLoaderRoute: typeof ProjectsElectromagneticBrakingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ProjectsElectromagneticBrakingRoute: ProjectsElectromagneticBrakingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
