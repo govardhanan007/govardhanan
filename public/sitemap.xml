@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://govardhanan.lovable.app/</loc>
+    <loc>https://www.govardhanan.com/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://govardhanan.lovable.app/projects/electromagnetic-braking</loc>
+    <loc>https://www.govardhanan.com/projects/electromagnetic-braking</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

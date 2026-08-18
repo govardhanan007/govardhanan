@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://govardhanan.lovable.app/sitemap.xml
+Sitemap: https://www.govardhanan.com/sitemap.xml

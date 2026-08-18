@@ -260,6 +260,8 @@ a.tile:hover{transform:translateY(-3px);border-color:var(--accent, var(--border)
 html[data-theme="dark"] .connect-tile[data-brand="github"] .badge{background:#24292F}
 .connect-tile[data-brand="youtube"] .badge{background:#FF0000}
 .connect-tile[data-brand="vk"] .badge{background:#0077FF}
+.connect-tile[data-brand="threads"] .badge{background:#000}
+html[data-theme="dark"] .connect-tile[data-brand="threads"] .badge{background:#101010}
 .connect-tile[data-brand="gmail"] .badge{background:#fff;border:1px solid #eaeaea}
 .connect-tile[data-brand="phone"] .badge{background:linear-gradient(180deg,#34C759,#2FA84F)}
 .connect-tile[data-brand="website"] .badge{background:linear-gradient(180deg,#0A2540,#123B6B)}
@@ -276,6 +278,8 @@ html[data-theme="dark"] .connect-tile[data-brand="x"]:hover{border-color:#fff}
 html[data-theme="dark"] .connect-tile[data-brand="github"]:hover{border-color:#fff}
 .connect-tile[data-brand="youtube"]:hover{border-color:#FF0000}
 .connect-tile[data-brand="vk"]:hover{border-color:#0077FF}
+.connect-tile[data-brand="threads"]:hover{border-color:#000}
+html[data-theme="dark"] .connect-tile[data-brand="threads"]:hover{border-color:#fff}
 .connect-tile[data-brand="gmail"]:hover{border-color:#EA4335}
 .connect-tile[data-brand="phone"]:hover{border-color:#34C759}
 .connect-tile[data-brand="website"]:hover{border-color:var(--navy)}
