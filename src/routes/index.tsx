@@ -28,6 +28,94 @@ export const Route = createFileRoute("/")({
     ],
     scripts: [
       { src: "/script.js", defer: true },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://govardhanan.com/#website",
+              "name": "Govardhanan",
+              "alternateName": "Govardhanan P",
+              "url": "https://govardhanan.com/",
+              "inLanguage": "en",
+              "publisher": {
+                "@id": "https://govardhanan.com/#person"
+              }
+            },
+            {
+              "@type": "ProfilePage",
+              "@id": "https://govardhanan.com/#profilepage",
+              "url": "https://govardhanan.com/",
+              "name": "Govardhanan P | Official Portfolio",
+              "isPartOf": {
+                "@id": "https://govardhanan.com/#website"
+              },
+              "mainEntity": {
+                "@id": "https://govardhanan.com/#person"
+              }
+            },
+            {
+              "@type": "Person",
+              "@id": "https://govardhanan.com/#person",
+              "name": "Govardhanan P",
+              "url": "https://govardhanan.com/",
+              "image": "https://govardhanan.com/assets/photo.jpg",
+              "jobTitle": "MBA Student and Mechanical Engineer",
+              "description": "Govardhanan P is an MBA (General) student and Mechanical Engineering graduate from Chennai, India, with interests in human resources, business management, marketing and operations.",
+              "email": "mailto:govardhanan1723@govardhanan.com",
+              "telephone": "+91-86103-91303",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Chennai",
+                "addressRegion": "Tamil Nadu",
+                "addressCountry": "IN"
+              },
+              "alumniOf": [
+                {
+                  "@type": "CollegeOrUniversity",
+                  "name": "Dr. M.G.R. Educational and Research Institute"
+                },
+                {
+                  "@type": "EducationalOrganization",
+                  "name": "NTTF, Vellore"
+                }
+              ],
+              "knowsAbout": [
+                "Human Resource Management",
+                "Recruitment",
+                "Talent Acquisition",
+                "Marketing",
+                "Business Management",
+                "Business Development",
+                "Operations Management",
+                "Customer Relationship Management",
+                "Leadership",
+                "Entrepreneurship",
+                "Mechanical Engineering",
+                "Tool Engineering",
+                "Digital Manufacturing",
+                "CAD",
+                "CAM",
+                "Project Management",
+                "Business Communication"
+              ],
+              "sameAs": [
+                "https://www.linkedin.com/in/pgovardhanan",
+                "https://www.instagram.com/govardhanan1723",
+                "https://www.facebook.com/share/17dsqmsyUM/",
+                "https://x.com/Govardhanan007",
+                "https://t.me/govardhanan1723",
+                "https://github.com/govardhanan007",
+                "https://vk.ru/govardhanan1723",
+                "https://www.threads.com/@govardhanan1723",
+                "https://youtube.com/@mass__tamilan__yt"
+              ]
+            }
+          ]
+        }),
+      },
     ],
   }),
 });
