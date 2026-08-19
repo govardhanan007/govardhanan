@@ -5,20 +5,20 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Govardhanan P — MBA General Student & Mechanical Engineer" },
+      { title: "Govardhanan P | MBA Student & Mechanical Engineer | Official Portfolio" },
       {
         name: "description",
         content:
-          "Portfolio of Govardhanan P — MBA General student and Mechanical Engineer focused on leadership, strategy, marketing, sales, HR and business innovation.",
+          "Official portfolio of Govardhanan P, an MBA student and Mechanical Engineering graduate showcasing education, skills, projects, certifications, achievements, and professional journey.",
       },
       { property: "og:type", content: "profile" },
-      { property: "og:title", content: "Govardhanan P — MBA General Student & Mechanical Engineer" },
-      { property: "og:description", content: "Leadership • Strategy • Innovation • Growth." },
+      { property: "og:title", content: "Govardhanan P | MBA Student & Mechanical Engineer | Official Portfolio" },
+      { property: "og:description", content: "Official portfolio of Govardhanan P — MBA student and Mechanical Engineering graduate." },
       { property: "og:url", content: "https://govardhanan.com/" },
       { property: "og:image", content: "https://govardhanan.com/assets/photo.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Govardhanan P — MBA General Student & Mechanical Engineer" },
-      { name: "twitter:description", content: "Leadership • Strategy • Innovation • Growth." },
+      { name: "twitter:title", content: "Govardhanan P | MBA Student & Mechanical Engineer | Official Portfolio" },
+      { name: "twitter:description", content: "Official portfolio of Govardhanan P — MBA student and Mechanical Engineering graduate." },
       { name: "twitter:image", content: "https://govardhanan.com/assets/photo.jpg" },
     ],
     links: [
