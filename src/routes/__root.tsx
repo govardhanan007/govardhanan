@@ -13,6 +13,9 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
+  useEffect(() => {
+    document.title = "Page Not Found | Govardhanan P";
+  }, []);
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
@@ -21,13 +24,31 @@ function NotFoundComponent() {
         <p className="mt-2 text-sm text-muted-foreground">
           The page you're looking for doesn't exist or has been moved.
         </p>
-        <div className="mt-6">
+        <div className="mt-6 flex flex-wrap justify-center gap-2">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Go home
+            Back to Govardhanan P home
           </Link>
+          <a
+            href="/#projects"
+            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+          >
+            View projects
+          </a>
+          <a
+            href="/#about"
+            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+          >
+            About Govardhanan P
+          </a>
+          <a
+            href="/#connect"
+            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+          >
+            Contact
+          </a>
         </div>
       </div>
     </div>
@@ -77,18 +98,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Govardhanan P — MBA General Student & Mechanical Engineer" },
-      { name: "description", content: "Portfolio of Govardhanan P — MBA General student and Mechanical Engineer focused on leadership, strategy, marketing, sales, HR and business innovation." },
+      { title: "Govardhanan P | MBA Student & Mechanical Engineer | Official Portfolio" },
+      { name: "description", content: "Official portfolio of Govardhanan P, an MBA student and Mechanical Engineering graduate showcasing education, skills, projects, certifications, achievements, and professional journey." },
       { name: "author", content: "Govardhanan P" },
-      { property: "og:site_name", content: "Govardhanan P" },
-      { property: "og:title", content: "Govardhanan P — MBA General Student & Mechanical Engineer" },
-      { property: "og:description", content: "Portfolio of Govardhanan P — MBA General student and Mechanical Engineer focused on leadership, strategy, marketing, sales, HR and business innovation." },
+      { property: "og:site_name", content: "Govardhanan" },
+      { property: "og:title", content: "Govardhanan P | MBA Student & Mechanical Engineer | Official Portfolio" },
+      { property: "og:description", content: "Official portfolio of Govardhanan P, an MBA student and Mechanical Engineering graduate showcasing education, skills, projects, certifications, achievements, and professional journey." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Govardhanan P — MBA General Student & Mechanical Engineer" },
-      { name: "twitter:description", content: "Portfolio of Govardhanan P — MBA General student and Mechanical Engineer focused on leadership, strategy, marketing, sales, HR and business innovation." },
-      { property: "og:image", content: "https://govardhanan.com/assets/photo.jpg" },
-      { name: "twitter:image", content: "https://govardhanan.com/assets/photo.jpg" },
+      { name: "twitter:title", content: "Govardhanan P | MBA Student & Mechanical Engineer | Official Portfolio" },
+      { name: "twitter:description", content: "Official portfolio of Govardhanan P, an MBA student and Mechanical Engineering graduate showcasing education, skills, projects, certifications, achievements, and professional journey." },
     ],
     links: [
       {
