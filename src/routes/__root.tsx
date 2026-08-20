@@ -97,6 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
+      { name: "google-site-verification", content: "g_ObmFLAe1PyzvyURp5txNohgoQ1GpyY_FwEQjmuMgw" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Govardhanan P | MBA Student & Mechanical Engineer | Official Portfolio" },
       { name: "description", content: "Official portfolio of Govardhanan P, an MBA student and Mechanical Engineering graduate showcasing education, skills, projects, certifications, achievements, and professional journey." },
