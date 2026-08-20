@@ -9,9 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as KgmTravelsAppRouteImport } from './routes/kgm-travels-app'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjectsElectromagneticBrakingRouteImport } from './routes/projects.electromagnetic-braking'
 
+const KgmTravelsAppRoute = KgmTravelsAppRouteImport.update({
+  id: '/kgm-travels-app',
+  path: '/kgm-travels-app',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -26,32 +32,47 @@ const ProjectsElectromagneticBrakingRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/kgm-travels-app': typeof KgmTravelsAppRoute
   '/projects/electromagnetic-braking': typeof ProjectsElectromagneticBrakingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/kgm-travels-app': typeof KgmTravelsAppRoute
   '/projects/electromagnetic-braking': typeof ProjectsElectromagneticBrakingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/kgm-travels-app': typeof KgmTravelsAppRoute
   '/projects/electromagnetic-braking': typeof ProjectsElectromagneticBrakingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/projects/electromagnetic-braking'
+  fullPaths: '/' | '/kgm-travels-app' | '/projects/electromagnetic-braking'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/projects/electromagnetic-braking'
-  id: '__root__' | '/' | '/projects/electromagnetic-braking'
+  to: '/' | '/kgm-travels-app' | '/projects/electromagnetic-braking'
+  id:
+    | '__root__'
+    | '/'
+    | '/kgm-travels-app'
+    | '/projects/electromagnetic-braking'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  KgmTravelsAppRoute: typeof KgmTravelsAppRoute
   ProjectsElectromagneticBrakingRoute: typeof ProjectsElectromagneticBrakingRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/kgm-travels-app': {
+      id: '/kgm-travels-app'
+      path: '/kgm-travels-app'
+      fullPath: '/kgm-travels-app'
+      preLoaderRoute: typeof KgmTravelsAppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -71,6 +92,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  KgmTravelsAppRoute: KgmTravelsAppRoute,
   ProjectsElectromagneticBrakingRoute: ProjectsElectromagneticBrakingRoute,
 }
 export const routeTree = rootRouteImport
