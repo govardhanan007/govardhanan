@@ -175,6 +175,7 @@ html[data-theme="dark"] .theme-toggle .moon{display:none}
 .cert-card .ico svg{width:26px;height:26px;display:block}
 .cert-info h3{margin:0 0 4px;font-size:1.05rem;line-height:1.35}
 .cert-issuer{color:var(--text-soft);font-size:.92rem;margin:0}
+.cert-meta{color:var(--text-soft);font-size:.8rem;margin:3px 0 0;opacity:.85}
 .cert-btn{margin-top:auto;align-self:flex-start}
 
 /* Featured specialization certificate */
