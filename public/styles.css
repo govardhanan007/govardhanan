@@ -42,8 +42,9 @@ p{margin:0 0 1em;color:var(--text)}
 /* Header */
 .site-header{position:sticky;top:0;z-index:50;background:color-mix(in oklab,var(--bg) 88%,transparent);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--border)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
-.brand{font-weight:800;letter-spacing:-.01em;color:var(--navy);font-size:1.05rem}
+.brand{font-weight:800;letter-spacing:-.01em;color:var(--navy);font-size:1.05rem;display:flex;align-items:center;gap:10px}
 .brand .dot{color:var(--gold)}
+.brand-mark{width:32px;height:32px;border-radius:50%;object-fit:cover;border:1px solid var(--border);box-shadow:var(--shadow-sm);flex:none}
 .nav-links{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 .nav-links a{color:var(--text-soft);font-size:.92rem;padding:8px 12px;border-radius:8px;font-weight:500}
 .nav-links a:hover{color:var(--navy);background:var(--surface-alt);text-decoration:none}
