@@ -40,11 +40,12 @@
       {
         "@type": "WebSite",
         "@id": "https://www.govardhanan.com/#website",
-        "name": "Govardhanan",
-        "alternateName": "Govardhanan P",
+        "name": "Govardhanan P",
+        "alternateName": "Govardhanan",
         "url": "https://www.govardhanan.com/",
         "inLanguage": "en",
-        "publisher": { "@id": "https://www.govardhanan.com/#person" }
+        "publisher": { "@id": "https://www.govardhanan.com/#person" },
+        "about": { "@id": "https://www.govardhanan.com/#person" }
       },
       {
         "@type": "ProfilePage",
@@ -52,16 +53,27 @@
         "url": "https://www.govardhanan.com/",
         "name": "Govardhanan P | Official Portfolio",
         "isPartOf": { "@id": "https://www.govardhanan.com/#website" },
-        "mainEntity": { "@id": "https://www.govardhanan.com/#person" }
+        "primaryImageOfPage": "https://www.govardhanan.com/assets/photo.jpg",
+        "mainEntity": { "@id": "https://www.govardhanan.com/#person" },
+        "significantLink": [
+          "https://www.govardhanan.com/#education",
+          "https://www.govardhanan.com/#experience",
+          "https://www.govardhanan.com/#projects",
+          "https://www.govardhanan.com/#certifications",
+          "https://www.govardhanan.com/projects/electromagnetic-braking"
+        ]
       },
       {
         "@type": "Person",
         "@id": "https://www.govardhanan.com/#person",
         "name": "Govardhanan P",
+        "givenName": "Govardhanan",
         "url": "https://www.govardhanan.com/",
+        "mainEntityOfPage": "https://www.govardhanan.com/",
         "image": "https://www.govardhanan.com/assets/photo.jpg",
-        "jobTitle": "MBA Student and Mechanical Engineer",
-        "description": "Govardhanan P is an MBA (General) student and Mechanical Engineering graduate from Chennai, India, with interests in human resources, business management, marketing and operations.",
+        "jobTitle": "MBA (General) Student and Mechanical Engineering Graduate",
+        "description": "Govardhanan P is an MBA (General) student at the Faculty of Management Studies, Dr. M.G.R. Educational and Research Institute, and a Mechanical Engineering graduate based in Chennai, Tamil Nadu, India. He is an HR aspirant with interests in human resource management, digital marketing, business development and management.",
+        "nationality": { "@type": "Country", "name": "India" },
         "email": "mailto:govardhanan1723@govardhanan.com",
         "telephone": "+91-86103-91303",
         "address": {
@@ -70,28 +82,78 @@
           "addressRegion": "Tamil Nadu",
           "addressCountry": "IN"
         },
+        "homeLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Chennai",
+            "addressRegion": "Tamil Nadu",
+            "addressCountry": "IN"
+          }
+        },
         "alumniOf": [
-          { "@type": "CollegeOrUniversity", "name": "Dr. M.G.R. Educational and Research Institute" },
-          { "@type": "EducationalOrganization", "name": "NTTF, Vellore" }
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Dr. M.G.R. Educational and Research Institute",
+            "address": { "@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN" }
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "NTTF, Vellore",
+            "address": { "@type": "PostalAddress", "addressLocality": "Vellore", "addressRegion": "Tamil Nadu", "addressCountry": "IN" }
+          },
+          {
+            "@type": "HighSchool",
+            "name": "Bharathi Matriculation Higher Secondary School, Maduravoyal",
+            "address": { "@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN" }
+          }
         ],
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Human Resources",
+          "occupationLocation": { "@type": "City", "name": "Chennai" }
+        },
+        "knowsLanguage": ["en", "ta"],
         "knowsAbout": [
           "Human Resource Management",
-          "Recruitment",
+          "Recruitment and Selection",
           "Talent Acquisition",
-          "Marketing",
-          "Business Management",
+          "Employee Onboarding",
+          "Employee Engagement",
+          "HR Operations",
+          "HR Documentation",
+          "Attendance and Leave Management",
+          "Digital Marketing",
+          "Social Media Marketing",
           "Business Development",
+          "Business Management",
           "Operations Management",
           "Customer Relationship Management",
+          "Business Communication",
           "Leadership",
-          "Entrepreneurship",
           "Mechanical Engineering",
           "Tool Engineering",
           "Digital Manufacturing",
           "CAD",
-          "CAM",
-          "Project Management",
-          "Business Communication"
+          "CAM"
+        ],
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "name": "Introduction to Social Media Marketing", "credentialCategory": "Certificate", "recognizedBy": { "@type": "Organization", "name": "Meta" }, "dateCreated": "2026-08-26", "identifier": "125GEA5APF6X", "url": "https://www.coursera.org/account/accomplishments/verify/125GEA5APF6X" },
+          { "@type": "EducationalOccupationalCredential", "name": "Generative AI: Prompt Engineering Basics", "credentialCategory": "Certificate", "recognizedBy": { "@type": "Organization", "name": "IBM" }, "identifier": "009KIW97ZQU4", "url": "https://www.coursera.org/account/accomplishments/verify/009KIW97ZQU4" },
+          { "@type": "EducationalOccupationalCredential", "name": "Generative AI: Introduction and Applications", "credentialCategory": "Certificate", "recognizedBy": { "@type": "Organization", "name": "IBM" }, "dateCreated": "2026-07-27", "identifier": "L4HQKM1IKJOB", "url": "https://www.coursera.org/account/accomplishments/verify/L4HQKM1IKJOB" },
+          { "@type": "EducationalOccupationalCredential", "name": "Human Resource Management: HR for People Managers Specialization", "credentialCategory": "Specialization Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Minnesota" }, "url": "https://www.coursera.org/account/accomplishments/specialization/FCNJAOCSFTSF" },
+          { "@type": "EducationalOccupationalCredential", "name": "Foundations of HR Operations", "credentialCategory": "Certificate", "recognizedBy": { "@type": "Organization", "name": "HRCI" }, "dateCreated": "2026-07-18", "identifier": "7SVOSCCR0N9Q", "url": "https://www.coursera.org/account/accomplishments/verify/7SVOSCCR0N9Q" },
+          { "@type": "EducationalOccupationalCredential", "name": "Total Rewards and Employee Development", "credentialCategory": "Certificate", "recognizedBy": { "@type": "Organization", "name": "HRCI" }, "dateCreated": "2026-07-24", "identifier": "R141MCHUVWGW", "url": "https://www.coursera.org/account/accomplishments/verify/R141MCHUVWGW" },
+          { "@type": "EducationalOccupationalCredential", "name": "Talent Acquisition and Onboarding", "credentialCategory": "Certificate", "recognizedBy": { "@type": "Organization", "name": "HRCI" }, "dateCreated": "2026-07-25", "identifier": "PNCEKXMCL97T", "url": "https://www.coursera.org/account/accomplishments/verify/PNCEKXMCL97T" },
+          { "@type": "EducationalOccupationalCredential", "name": "Employee Relations, Safety, and Compliance", "credentialCategory": "Certificate", "recognizedBy": { "@type": "Organization", "name": "HRCI" }, "dateCreated": "2026-07-27", "identifier": "NHKDGCPBKIR5", "url": "https://www.coursera.org/account/accomplishments/verify/NHKDGCPBKIR5" },
+          { "@type": "EducationalOccupationalCredential", "name": "Preparing to Manage Human Resources", "credentialCategory": "Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Minnesota" }, "identifier": "K6IV1BOD9PI8", "url": "https://www.coursera.org/account/accomplishments/verify/K6IV1BOD9PI8" },
+          { "@type": "EducationalOccupationalCredential", "name": "Managing Employee Performance", "credentialCategory": "Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Minnesota" }, "identifier": "MZF4P2JWJ0WY", "url": "https://www.coursera.org/account/accomplishments/verify/MZF4P2JWJ0WY" },
+          { "@type": "EducationalOccupationalCredential", "name": "Managing Employee Compensation", "credentialCategory": "Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Minnesota" }, "identifier": "IEBU600XTNTO", "url": "https://www.coursera.org/account/accomplishments/verify/IEBU600XTNTO" },
+          { "@type": "EducationalOccupationalCredential", "name": "Recruiting, Hiring, and Onboarding Employees", "credentialCategory": "Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Minnesota" }, "identifier": "6636AR5VQ9MK", "url": "https://www.coursera.org/account/accomplishments/verify/6636AR5VQ9MK" },
+          { "@type": "EducationalOccupationalCredential", "name": "Human Resources Management Capstone: HR for People Managers", "credentialCategory": "Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Minnesota" }, "identifier": "7G0I3P6EOOJF", "url": "https://www.coursera.org/account/accomplishments/verify/7G0I3P6EOOJF" },
+          { "@type": "EducationalOccupationalCredential", "name": "Leading Through Effective Communication", "credentialCategory": "Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Arizona State University" }, "dateCreated": "2026-08-05", "identifier": "RYZ6CJ6UNWZL", "url": "https://www.coursera.org/account/accomplishments/verify/RYZ6CJ6UNWZL" },
+          { "@type": "EducationalOccupationalCredential", "name": "Professional Skills: Leading Through Effective Communication", "credentialCategory": "Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Arizona State University" }, "identifier": "OPG5D5F1MV2H", "url": "https://www.coursera.org/account/accomplishments/verify/OPG5D5F1MV2H" },
+          { "@type": "EducationalOccupationalCredential", "name": "Teamwork Skills: Communicating Effectively in Groups", "credentialCategory": "Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Colorado Boulder" }, "identifier": "IRGGN1IHOI5P", "url": "https://www.coursera.org/account/accomplishments/verify/IRGGN1IHOI5P" }
         ],
         "sameAs": [
           "https://www.linkedin.com/in/pgovardhanan",
