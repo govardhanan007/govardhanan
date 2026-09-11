@@ -12,7 +12,7 @@
   <meta name="google-site-verification" content="g_ObmFLAe1PyzvyURp5txNohgoQ1GpyY_FwEQjmuMgw" />
   <meta name="robots" content="index,follow" />
 
-  <link rel="canonical" href="https://govardhanan.com/" />
+  <link rel="canonical" href="https://www.govardhanan.com/" />
   <link rel="icon" href="/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preload" as="image" href="/assets/photo.jpg" fetchpriority="high" />
@@ -22,8 +22,8 @@
   <meta property="og:site_name" content="Govardhanan" />
   <meta property="og:title" content="Govardhanan P | MBA Student &amp; Mechanical Engineer | Official Portfolio" />
   <meta property="og:description" content="Official portfolio of Govardhanan P — MBA student and Mechanical Engineering graduate. Education, skills, projects, certifications and resume." />
-  <meta property="og:url" content="https://govardhanan.com/" />
-  <meta property="og:image" content="https://govardhanan.com/assets/photo.jpg" />
+  <meta property="og:url" content="https://www.govardhanan.com/" />
+  <meta property="og:image" content="https://www.govardhanan.com/assets/photo.jpg" />
   <meta property="og:image:alt" content="Portrait of Govardhanan P" />
 
   <meta name="twitter:card" content="summary_large_image" />
@@ -31,7 +31,7 @@
   <meta name="twitter:creator" content="@Govardhanan007" />
   <meta name="twitter:title" content="Govardhanan P | MBA Student &amp; Mechanical Engineer | Official Portfolio" />
   <meta name="twitter:description" content="Official portfolio of Govardhanan P — MBA student and Mechanical Engineering graduate. Education, skills, projects, certifications and resume." />
-  <meta name="twitter:image" content="https://govardhanan.com/assets/photo.jpg" />
+  <meta name="twitter:image" content="https://www.govardhanan.com/assets/photo.jpg" />
 
   <script type="application/ld+json">
   {
@@ -39,29 +39,41 @@
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://govardhanan.com/#website",
-        "name": "Govardhanan",
-        "alternateName": "Govardhanan P",
-        "url": "https://govardhanan.com/",
+        "@id": "https://www.govardhanan.com/#website",
+        "name": "Govardhanan P",
+        "alternateName": "Govardhanan",
+        "url": "https://www.govardhanan.com/",
         "inLanguage": "en",
-        "publisher": { "@id": "https://govardhanan.com/#person" }
+        "publisher": { "@id": "https://www.govardhanan.com/#person" },
+        "about": { "@id": "https://www.govardhanan.com/#person" }
       },
       {
         "@type": "ProfilePage",
-        "@id": "https://govardhanan.com/#profilepage",
-        "url": "https://govardhanan.com/",
+        "@id": "https://www.govardhanan.com/#profilepage",
+        "url": "https://www.govardhanan.com/",
         "name": "Govardhanan P | Official Portfolio",
-        "isPartOf": { "@id": "https://govardhanan.com/#website" },
-        "mainEntity": { "@id": "https://govardhanan.com/#person" }
+        "isPartOf": { "@id": "https://www.govardhanan.com/#website" },
+        "primaryImageOfPage": "https://www.govardhanan.com/assets/photo.jpg",
+        "mainEntity": { "@id": "https://www.govardhanan.com/#person" },
+        "significantLink": [
+          "https://www.govardhanan.com/#education",
+          "https://www.govardhanan.com/#experience",
+          "https://www.govardhanan.com/#projects",
+          "https://www.govardhanan.com/#certifications",
+          "https://www.govardhanan.com/projects/electromagnetic-braking"
+        ]
       },
       {
         "@type": "Person",
-        "@id": "https://govardhanan.com/#person",
+        "@id": "https://www.govardhanan.com/#person",
         "name": "Govardhanan P",
-        "url": "https://govardhanan.com/",
-        "image": "https://govardhanan.com/assets/photo.jpg",
-        "jobTitle": "MBA Student and Mechanical Engineer",
-        "description": "Govardhanan P is an MBA (General) student and Mechanical Engineering graduate from Chennai, India, with interests in human resources, business management, marketing and operations.",
+        "givenName": "Govardhanan",
+        "url": "https://www.govardhanan.com/",
+        "mainEntityOfPage": "https://www.govardhanan.com/",
+        "image": "https://www.govardhanan.com/assets/photo.jpg",
+        "jobTitle": "MBA (General) Student and Mechanical Engineering Graduate",
+        "description": "Govardhanan P is an MBA (General) student at the Faculty of Management Studies, Dr. M.G.R. Educational and Research Institute, and a Mechanical Engineering graduate based in Chennai, Tamil Nadu, India. He is an HR aspirant with interests in human resource management, digital marketing, business development and management.",
+        "nationality": { "@type": "Country", "name": "India" },
         "email": "mailto:govardhanan1723@govardhanan.com",
         "telephone": "+91-86103-91303",
         "address": {
@@ -70,28 +82,78 @@
           "addressRegion": "Tamil Nadu",
           "addressCountry": "IN"
         },
+        "homeLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Chennai",
+            "addressRegion": "Tamil Nadu",
+            "addressCountry": "IN"
+          }
+        },
         "alumniOf": [
-          { "@type": "CollegeOrUniversity", "name": "Dr. M.G.R. Educational and Research Institute" },
-          { "@type": "EducationalOrganization", "name": "NTTF, Vellore" }
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Dr. M.G.R. Educational and Research Institute",
+            "address": { "@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN" }
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "NTTF, Vellore",
+            "address": { "@type": "PostalAddress", "addressLocality": "Vellore", "addressRegion": "Tamil Nadu", "addressCountry": "IN" }
+          },
+          {
+            "@type": "HighSchool",
+            "name": "Bharathi Matriculation Higher Secondary School, Maduravoyal",
+            "address": { "@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN" }
+          }
         ],
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Human Resources",
+          "occupationLocation": { "@type": "City", "name": "Chennai" }
+        },
+        "knowsLanguage": ["en", "ta"],
         "knowsAbout": [
           "Human Resource Management",
-          "Recruitment",
+          "Recruitment and Selection",
           "Talent Acquisition",
-          "Marketing",
-          "Business Management",
+          "Employee Onboarding",
+          "Employee Engagement",
+          "HR Operations",
+          "HR Documentation",
+          "Attendance and Leave Management",
+          "Digital Marketing",
+          "Social Media Marketing",
           "Business Development",
+          "Business Management",
           "Operations Management",
           "Customer Relationship Management",
+          "Business Communication",
           "Leadership",
-          "Entrepreneurship",
           "Mechanical Engineering",
           "Tool Engineering",
           "Digital Manufacturing",
           "CAD",
-          "CAM",
-          "Project Management",
-          "Business Communication"
+          "CAM"
+        ],
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "name": "Introduction to Social Media Marketing", "credentialCategory": "Certificate", "recognizedBy": { "@type": "Organization", "name": "Meta" }, "dateCreated": "2026-08-26", "identifier": "125GEA5APF6X", "url": "https://www.coursera.org/account/accomplishments/verify/125GEA5APF6X" },
+          { "@type": "EducationalOccupationalCredential", "name": "Generative AI: Prompt Engineering Basics", "credentialCategory": "Certificate", "recognizedBy": { "@type": "Organization", "name": "IBM" }, "identifier": "009KIW97ZQU4", "url": "https://www.coursera.org/account/accomplishments/verify/009KIW97ZQU4" },
+          { "@type": "EducationalOccupationalCredential", "name": "Generative AI: Introduction and Applications", "credentialCategory": "Certificate", "recognizedBy": { "@type": "Organization", "name": "IBM" }, "dateCreated": "2026-07-27", "identifier": "L4HQKM1IKJOB", "url": "https://www.coursera.org/account/accomplishments/verify/L4HQKM1IKJOB" },
+          { "@type": "EducationalOccupationalCredential", "name": "Human Resource Management: HR for People Managers Specialization", "credentialCategory": "Specialization Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Minnesota" }, "url": "https://www.coursera.org/account/accomplishments/specialization/FCNJAOCSFTSF" },
+          { "@type": "EducationalOccupationalCredential", "name": "Foundations of HR Operations", "credentialCategory": "Certificate", "recognizedBy": { "@type": "Organization", "name": "HRCI" }, "dateCreated": "2026-07-18", "identifier": "7SVOSCCR0N9Q", "url": "https://www.coursera.org/account/accomplishments/verify/7SVOSCCR0N9Q" },
+          { "@type": "EducationalOccupationalCredential", "name": "Total Rewards and Employee Development", "credentialCategory": "Certificate", "recognizedBy": { "@type": "Organization", "name": "HRCI" }, "dateCreated": "2026-07-24", "identifier": "R141MCHUVWGW", "url": "https://www.coursera.org/account/accomplishments/verify/R141MCHUVWGW" },
+          { "@type": "EducationalOccupationalCredential", "name": "Talent Acquisition and Onboarding", "credentialCategory": "Certificate", "recognizedBy": { "@type": "Organization", "name": "HRCI" }, "dateCreated": "2026-07-25", "identifier": "PNCEKXMCL97T", "url": "https://www.coursera.org/account/accomplishments/verify/PNCEKXMCL97T" },
+          { "@type": "EducationalOccupationalCredential", "name": "Employee Relations, Safety, and Compliance", "credentialCategory": "Certificate", "recognizedBy": { "@type": "Organization", "name": "HRCI" }, "dateCreated": "2026-07-27", "identifier": "NHKDGCPBKIR5", "url": "https://www.coursera.org/account/accomplishments/verify/NHKDGCPBKIR5" },
+          { "@type": "EducationalOccupationalCredential", "name": "Preparing to Manage Human Resources", "credentialCategory": "Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Minnesota" }, "identifier": "K6IV1BOD9PI8", "url": "https://www.coursera.org/account/accomplishments/verify/K6IV1BOD9PI8" },
+          { "@type": "EducationalOccupationalCredential", "name": "Managing Employee Performance", "credentialCategory": "Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Minnesota" }, "identifier": "MZF4P2JWJ0WY", "url": "https://www.coursera.org/account/accomplishments/verify/MZF4P2JWJ0WY" },
+          { "@type": "EducationalOccupationalCredential", "name": "Managing Employee Compensation", "credentialCategory": "Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Minnesota" }, "identifier": "IEBU600XTNTO", "url": "https://www.coursera.org/account/accomplishments/verify/IEBU600XTNTO" },
+          { "@type": "EducationalOccupationalCredential", "name": "Recruiting, Hiring, and Onboarding Employees", "credentialCategory": "Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Minnesota" }, "identifier": "6636AR5VQ9MK", "url": "https://www.coursera.org/account/accomplishments/verify/6636AR5VQ9MK" },
+          { "@type": "EducationalOccupationalCredential", "name": "Human Resources Management Capstone: HR for People Managers", "credentialCategory": "Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Minnesota" }, "identifier": "7G0I3P6EOOJF", "url": "https://www.coursera.org/account/accomplishments/verify/7G0I3P6EOOJF" },
+          { "@type": "EducationalOccupationalCredential", "name": "Leading Through Effective Communication", "credentialCategory": "Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Arizona State University" }, "dateCreated": "2026-08-05", "identifier": "RYZ6CJ6UNWZL", "url": "https://www.coursera.org/account/accomplishments/verify/RYZ6CJ6UNWZL" },
+          { "@type": "EducationalOccupationalCredential", "name": "Professional Skills: Leading Through Effective Communication", "credentialCategory": "Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Arizona State University" }, "identifier": "OPG5D5F1MV2H", "url": "https://www.coursera.org/account/accomplishments/verify/OPG5D5F1MV2H" },
+          { "@type": "EducationalOccupationalCredential", "name": "Teamwork Skills: Communicating Effectively in Groups", "credentialCategory": "Certificate", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Colorado Boulder" }, "identifier": "IRGGN1IHOI5P", "url": "https://www.coursera.org/account/accomplishments/verify/IRGGN1IHOI5P" }
         ],
         "sameAs": [
           "https://www.linkedin.com/in/pgovardhanan",
@@ -169,7 +231,7 @@
           </div>
         </div>
         <div class="portrait" aria-hidden="false">
-          <img src="/assets/photo.jpg" alt="Govardhanan P professional profile photo" loading="eager" fetchpriority="high" decoding="async" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <img src="/assets/photo.jpg" alt="Govardhanan P — MBA (General) student and Mechanical Engineering graduate from Chennai, Tamil Nadu, India" width="640" height="640" loading="eager" fetchpriority="high" decoding="async" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
           <div class="placeholder" style="display:none">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
             <span>Photo will appear here</span>
@@ -183,8 +245,19 @@
       <div class="container about-grid">
         <div class="reveal">
           <span class="eyebrow">About</span>
-          <h2 id="about-title">Curious mind. Leadership heart. Business focus.</h2>
-          <p>I am an MBA General student and a Mechanical Engineer building a career at the intersection of leadership, strategy and innovation. My focus is simple — grow into a leader who can turn ideas into value, teams into performance, and vision into measurable outcomes.</p>
+          <h2 id="about-title">About Govardhanan P</h2>
+          <p>Govardhanan P is an MBA (General) student at the Faculty of Management Studies, Dr. M.G.R. Educational and Research Institute, and a Mechanical Engineering graduate based in Chennai, Tamil Nadu, India. He is building a career in human resource management, supported by an HR internship at Textspeed Technology Pvt. Ltd. and HR certifications from the University of Minnesota, HRCI and Meta.</p>
+          <p>His interests span human resources, digital marketing, business development and general management. An engineering background in tool engineering and digital manufacturing shapes how he approaches problems, while business communication, teamwork and day-to-day business operations experience from a family-run transport service ground that thinking in practice.</p>
+          <dl class="fact-list">
+            <div><dt>Full name</dt><dd>Govardhanan P</dd></div>
+            <div><dt>Currently studying</dt><dd>MBA (General), Faculty of Management Studies, Dr. M.G.R. Educational and Research Institute (2025 — 2027)</dd></div>
+            <div><dt>Engineering degree</dt><dd>B.Tech Mechanical Engineering, Dr. M.G.R. Educational and Research Institute (2022 — 2025)</dd></div>
+            <div><dt>Career interest</dt><dd>Human resource management, digital marketing, business development and management</dd></div>
+            <div><dt>HR experience</dt><dd>HR intern at Textspeed Technology Pvt. Ltd. — see <a href="#experience">professional experience</a></dd></div>
+            <div><dt>Location</dt><dd>Chennai, Tamil Nadu, India</dd></div>
+            <div><dt>Website</dt><dd><a href="https://www.govardhanan.com/">www.govardhanan.com</a></dd></div>
+          </dl>
+          <p class="about-links">Explore his <a href="#education">education</a>, <a href="#experience">professional experience</a>, <a href="#skills">skills</a>, <a href="#projects">projects</a>, <a href="#certifications">certifications</a>, <a href="#vision">career vision</a> and <a href="#resume">resume</a>, or <a href="#connect">connect with Govardhanan P</a>.</p>
           <ul class="chip-list" aria-label="Core attributes">
             <li>Leadership mindset</li><li>Marketing interest</li><li>Sales interest</li>
             <li>HR management</li><li>Business strategy</li><li>Communication</li>
@@ -208,14 +281,14 @@
             <div class="years">2025 — 2027</div>
             <div>
               <h3>Master of Business Administration (MBA – General) <span class="badge">Pursuing</span></h3>
-              <p class="inst">Dr. M.G.R. Educational and Research Institute</p>
+              <p class="inst">Faculty of Management Studies, Dr. M.G.R. Educational and Research Institute, Chennai</p>
             </div>
           </article>
           <article class="edu-card reveal">
             <div class="years">2022 — 2025</div>
             <div>
               <h3>Bachelor of Technology (B.Tech) – Mechanical Engineering</h3>
-              <p class="inst">Dr. M.G.R. Educational and Research Institute · Percentage: 68.47%</p>
+              <p class="inst">Dr. M.G.R. Educational and Research Institute, Chennai · Percentage: 68.47%</p>
             </div>
           </article>
           <article class="edu-card reveal">
@@ -245,6 +318,25 @@
           <p>Hands-on operations and customer-facing work that shaped my business and management mindset.</p>
         </div>
         <div class="exp-list">
+          <article class="exp-card reveal">
+            <div class="exp-header">
+              <div>
+                <h3>HR Intern</h3>
+                <p class="exp-company">Textspeed Technology Pvt. Ltd. · Human Resources · Internship</p>
+              </div>
+            </div>
+            <ul class="exp-duties">
+              <li>Gained exposure to recruitment and selection processes.</li>
+              <li>Supported talent acquisition activities.</li>
+              <li>Assisted with employee onboarding.</li>
+              <li>Worked with attendance management records.</li>
+              <li>Worked with leave management records.</li>
+              <li>Helped prepare and maintain HR documentation.</li>
+              <li>Observed and supported employee engagement activities.</li>
+              <li>Gained practical understanding of day-to-day HR operations.</li>
+              <li>Practised professional communication in a workplace setting.</li>
+            </ul>
+          </article>
           <article class="exp-card reveal">
             <div class="exp-header">
               <div>
@@ -342,8 +434,9 @@
     <section id="projects" class="section" aria-labelledby="proj-title">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Project</span>
-          <h2 id="proj-title">Featured engineering project</h2>
+          <span class="eyebrow">Projects</span>
+          <h2 id="proj-title">Projects by Govardhanan P</h2>
+          <p>An academic mechanical engineering project and an MBA summer study on business and digital marketing practices.</p>
         </div>
         <article class="project-card reveal">
           <h3>Automatic Electromagnetic Braking System</h3>
@@ -359,6 +452,17 @@
             <div class="detail"><h4>Future Scope</h4><p>Integration with ABS/ADAS, regenerative energy recovery from eddy currents, and adaptive braking based on vehicle speed and load.</p></div>
           </div>
           <p class="resume-actions" style="margin-top:1.1rem"><a class="btn btn-primary" href="/projects/electromagnetic-braking">Read the full eddy current brake case study</a></p>
+        </article>
+
+        <article class="project-card reveal" style="margin-top:1.4rem">
+          <h3>A Study on Business and Digital Marketing Practices of Textspeed Technology Private Limited (A Website-Based Observational Study)</h3>
+          <p class="tagline">An MBA summer project examining how Textspeed Technology Private Limited presents its business and digital marketing practices.</p>
+          <div class="project-details">
+            <div class="detail"><h4>Purpose</h4><p>To study the business activities and digital marketing practices of Textspeed Technology Private Limited through publicly available information on its website.</p></div>
+            <div class="detail"><h4>My role</h4><p>Sole student author of the summer project report, carried out as part of the MBA (General) programme.</p></div>
+            <div class="detail"><h4>What I worked on</h4><p>Observed and recorded the company&#39;s website content, service offerings and online presentation, then organised the observations into a structured study report.</p></div>
+            <div class="detail"><h4>Skills and concepts involved</h4><p>Digital marketing concepts, business study methods, observational research, report writing and business communication.</p></div>
+          </div>
         </article>
       </div>
     </section>
@@ -656,7 +760,7 @@
             <p class="meta">MBA General Student · Mechanical Engineer</p>
             <p class="meta">
               <a href="tel:+918610391303">+91 86103 91303</a> ·
-              <a href="https://govardhanan.com">govardhanan.com</a>
+              <a href="https://www.govardhanan.com">www.govardhanan.com</a>
             </p>
           </div>
           <div class="resume-actions">
@@ -791,7 +895,7 @@
             </span>
             <span class="label">Phone</span>
           </a>
-          <a class="connect-tile" data-brand="website" href="https://govardhanan.com" aria-label="Open govardhanan.com">
+          <a class="connect-tile" data-brand="website" href="https://www.govardhanan.com" aria-label="Open govardhanan.com">
             <span class="badge">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 4 9 14 14 0 0 1-4 9 14 14 0 0 1-4-9 14 14 0 0 1 4-9z"/></svg>
             </span>
@@ -838,7 +942,7 @@
           <ul class="footer-contact">
             <li><a href="mailto:govardhanan1723@govardhanan.com">govardhanan1723@govardhanan.com</a></li>
             <li><a href="tel:+918610391303">+91 86103 91303</a></li>
-            <li><a href="https://govardhanan.com">govardhanan.com</a></li>
+            <li><a href="https://www.govardhanan.com">www.govardhanan.com</a></li>
           </ul>
           <div class="footer-social" aria-label="Social links">
             <a data-brand="linkedin" href="https://www.linkedin.com/in/pgovardhanan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.4v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
@@ -851,7 +955,7 @@
       </div>
       <div class="footer-bottom">
         <span>© 2026 Govardhanan P. All rights reserved.</span>
-        <span>Built with care · <a href="https://govardhanan.com">govardhanan.com</a></span>
+        <span>Built with care · <a href="https://www.govardhanan.com">www.govardhanan.com</a></span>
       </div>
     </div>
   </footer>
