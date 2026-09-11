@@ -62,8 +62,8 @@ export const Route = createFileRoute("/")({
               "name": "Govardhanan P",
               "url": "https://www.govardhanan.com/",
               "image": "https://www.govardhanan.com/assets/photo.jpg",
-              "jobTitle": "MBA Student and Mechanical Engineer",
-              "description": "Govardhanan P is an MBA (General) student and Mechanical Engineering graduate from Chennai, India, with interests in human resources, business management, marketing and operations.",
+              "jobTitle": "MBA (General) Student and Mechanical Engineering Graduate",
+              "description": "Govardhanan P is an MBA (General) student at the Faculty of Management Studies, Dr. M.G.R. Educational and Research Institute, and a Mechanical Engineering graduate based in Chennai, Tamil Nadu, India, with interests in human resource management, digital marketing, business development and management.",
               "email": "mailto:govardhanan1723@govardhanan.com",
               "telephone": "+91-86103-91303",
               "address": {
