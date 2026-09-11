@@ -4,7 +4,7 @@ import { useEffect } from "react";
 const TITLE = "KGM TRAVELS Mobile App — Coming Soon";
 const DESC =
   "The KGM TRAVELS mobile app for school transportation is under development and will be available soon.";
-const URL = "https://govardhanan.com/kgm-travels-app";
+const URL = "https://www.govardhanan.com/kgm-travels-app";
 
 export const Route = createFileRoute("/kgm-travels-app")({
   component: KgmApp,

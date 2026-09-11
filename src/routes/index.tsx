@@ -14,15 +14,15 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "profile" },
       { property: "og:title", content: "Govardhanan P | MBA Student & Mechanical Engineer | Official Portfolio" },
       { property: "og:description", content: "Official portfolio of Govardhanan P — MBA student and Mechanical Engineering graduate." },
-      { property: "og:url", content: "https://govardhanan.com/" },
-      { property: "og:image", content: "https://govardhanan.com/assets/photo.jpg" },
+      { property: "og:url", content: "https://www.govardhanan.com/" },
+      { property: "og:image", content: "https://www.govardhanan.com/assets/photo.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Govardhanan P | MBA Student & Mechanical Engineer | Official Portfolio" },
       { name: "twitter:description", content: "Official portfolio of Govardhanan P — MBA student and Mechanical Engineering graduate." },
-      { name: "twitter:image", content: "https://govardhanan.com/assets/photo.jpg" },
+      { name: "twitter:image", content: "https://www.govardhanan.com/assets/photo.jpg" },
     ],
     links: [
-      { rel: "canonical", href: "https://govardhanan.com/" },
+      { rel: "canonical", href: "https://www.govardhanan.com/" },
       { rel: "stylesheet", href: "/styles.css" },
       { rel: "preload", as: "image", href: "/assets/photo.jpg" },
     ],
@@ -35,33 +35,33 @@ export const Route = createFileRoute("/")({
           "@graph": [
             {
               "@type": "WebSite",
-              "@id": "https://govardhanan.com/#website",
+              "@id": "https://www.govardhanan.com/#website",
               "name": "Govardhanan",
               "alternateName": "Govardhanan P",
-              "url": "https://govardhanan.com/",
+              "url": "https://www.govardhanan.com/",
               "inLanguage": "en",
               "publisher": {
-                "@id": "https://govardhanan.com/#person"
+                "@id": "https://www.govardhanan.com/#person"
               }
             },
             {
               "@type": "ProfilePage",
-              "@id": "https://govardhanan.com/#profilepage",
-              "url": "https://govardhanan.com/",
+              "@id": "https://www.govardhanan.com/#profilepage",
+              "url": "https://www.govardhanan.com/",
               "name": "Govardhanan P | Official Portfolio",
               "isPartOf": {
-                "@id": "https://govardhanan.com/#website"
+                "@id": "https://www.govardhanan.com/#website"
               },
               "mainEntity": {
-                "@id": "https://govardhanan.com/#person"
+                "@id": "https://www.govardhanan.com/#person"
               }
             },
             {
               "@type": "Person",
-              "@id": "https://govardhanan.com/#person",
+              "@id": "https://www.govardhanan.com/#person",
               "name": "Govardhanan P",
-              "url": "https://govardhanan.com/",
-              "image": "https://govardhanan.com/assets/photo.jpg",
+              "url": "https://www.govardhanan.com/",
+              "image": "https://www.govardhanan.com/assets/photo.jpg",
               "jobTitle": "MBA Student and Mechanical Engineer",
               "description": "Govardhanan P is an MBA (General) student and Mechanical Engineering graduate from Chennai, India, with interests in human resources, business management, marketing and operations.",
               "email": "mailto:govardhanan1723@govardhanan.com",

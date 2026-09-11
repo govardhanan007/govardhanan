@@ -4,7 +4,7 @@ import { useEffect } from "react";
 const TITLE = "Eddy Current Brake: Automatic Electromagnetic Braking System Case Study";
 const DESC =
   "How an eddy current brake works — a technical case study of an automatic electromagnetic braking system built with an electromagnet, steel disc, ultrasonic sensing and an Arduino controller.";
-const URL = "https://govardhanan.com/projects/electromagnetic-braking";
+const URL = "https://www.govardhanan.com/projects/electromagnetic-braking";
 
 export const Route = createFileRoute("/projects/electromagnetic-braking")({
   component: CaseStudy,
@@ -16,11 +16,11 @@ export const Route = createFileRoute("/projects/electromagnetic-braking")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:url", content: URL },
-      { property: "og:image", content: "https://govardhanan.com/assets/photo.jpg" },
+      { property: "og:image", content: "https://www.govardhanan.com/assets/photo.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESC },
-      { name: "twitter:image", content: "https://govardhanan.com/assets/photo.jpg" },
+      { name: "twitter:image", content: "https://www.govardhanan.com/assets/photo.jpg" },
     ],
     links: [
       { rel: "canonical", href: URL },
