@@ -9,18 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as KgmTravelsAppRouteImport } from './routes/kgm-travels-app'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as KgmTravelsAppRouteImport } from './routes/kgm-travels-app'
 import { Route as ProjectsElectromagneticBrakingRouteImport } from './routes/projects.electromagnetic-braking'
 
-const KgmTravelsAppRoute = KgmTravelsAppRouteImport.update({
-  id: '/kgm-travels-app',
-  path: '/kgm-travels-app',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KgmTravelsAppRoute = KgmTravelsAppRouteImport.update({
+  id: '/kgm-travels-app',
+  path: '/kgm-travels-app',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsElectromagneticBrakingRoute =
@@ -52,10 +52,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to: '/' | '/kgm-travels-app' | '/projects/electromagnetic-braking'
   id:
-    | '__root__'
-    | '/'
-    | '/kgm-travels-app'
-    | '/projects/electromagnetic-braking'
+    '__root__' | '/' | '/kgm-travels-app' | '/projects/electromagnetic-braking'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -66,18 +63,18 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/kgm-travels-app': {
-      id: '/kgm-travels-app'
-      path: '/kgm-travels-app'
-      fullPath: '/kgm-travels-app'
-      preLoaderRoute: typeof KgmTravelsAppRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kgm-travels-app': {
+      id: '/kgm-travels-app'
+      path: '/kgm-travels-app'
+      fullPath: '/kgm-travels-app'
+      preLoaderRoute: typeof KgmTravelsAppRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/electromagnetic-braking': {
