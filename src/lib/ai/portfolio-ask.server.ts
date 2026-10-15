@@ -101,7 +101,12 @@ export async function handlePortfolioAsk(request: Request) {
   const result = streamText({
     model: provider.responses(MODEL),
     instructions: INSTRUCTIONS(content),
-    messages: parsed.messages as ModelMessage[],
+    // Only caller questions (user role) are forwarded; caller-supplied assistant
+    // turns are discarded so the model's own replies can't be forged to steer it.
+    messages: parsed.messages
+      .filter((m) => m.role === "user")
+      .slice(-8)
+      .map((m): ModelMessage => ({ role: "user", content: m.content })),
     abortSignal: request.signal,
     providerOptions: {
       openai: {
