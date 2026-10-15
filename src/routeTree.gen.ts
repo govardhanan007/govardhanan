@@ -11,7 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as KgmTravelsAppRouteImport } from './routes/kgm-travels-app'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as McpRouteImport } from './routes/mcp'
+import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as ProjectsElectromagneticBrakingRouteImport } from './routes/projects.electromagnetic-braking'
+import { Route as DotlovableOauthConsentRouteImport } from './routes/[.]lovable.oauth.consent'
 import { Route as ApiPublicAskRouteImport } from './routes/api/public/ask'
 
 const IndexRoute = IndexRouteImport.update({
@@ -24,12 +28,33 @@ const KgmTravelsAppRoute = KgmTravelsAppRouteImport.update({
   path: '/kgm-travels-app',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const McpRoute = McpRouteImport.update({
+  id: '/mcp',
+  path: '/mcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Char91DotwellKnownChar93OauthProtectedResourceRoute =
+  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
+    id: '/.well-known/oauth-protected-resource',
+    path: '/.well-known/oauth-protected-resource',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ProjectsElectromagneticBrakingRoute =
   ProjectsElectromagneticBrakingRouteImport.update({
     id: '/projects/electromagnetic-braking',
     path: '/projects/electromagnetic-braking',
     getParentRoute: () => rootRouteImport,
   } as any)
+const DotlovableOauthConsentRoute = DotlovableOauthConsentRouteImport.update({
+  id: '/.lovable/oauth/consent',
+  path: '/.lovable/oauth/consent',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicAskRoute = ApiPublicAskRouteImport.update({
   id: '/api/public/ask',
   path: '/api/public/ask',
@@ -39,20 +64,32 @@ const ApiPublicAskRoute = ApiPublicAskRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/kgm-travels-app': typeof KgmTravelsAppRoute
+  '/login': typeof LoginRoute
+  '/mcp': typeof McpRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/projects/electromagnetic-braking': typeof ProjectsElectromagneticBrakingRoute
+  '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
   '/api/public/ask': typeof ApiPublicAskRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/kgm-travels-app': typeof KgmTravelsAppRoute
+  '/login': typeof LoginRoute
+  '/mcp': typeof McpRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/projects/electromagnetic-braking': typeof ProjectsElectromagneticBrakingRoute
+  '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
   '/api/public/ask': typeof ApiPublicAskRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/kgm-travels-app': typeof KgmTravelsAppRoute
+  '/login': typeof LoginRoute
+  '/mcp': typeof McpRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/projects/electromagnetic-braking': typeof ProjectsElectromagneticBrakingRoute
+  '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
   '/api/public/ask': typeof ApiPublicAskRoute
 }
 export interface FileRouteTypes {
@@ -60,26 +97,42 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/kgm-travels-app'
+    | '/login'
+    | '/mcp'
+    | '/.well-known/oauth-protected-resource'
     | '/projects/electromagnetic-braking'
+    | '/.lovable/oauth/consent'
     | '/api/public/ask'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/kgm-travels-app'
+    | '/login'
+    | '/mcp'
+    | '/.well-known/oauth-protected-resource'
     | '/projects/electromagnetic-braking'
+    | '/.lovable/oauth/consent'
     | '/api/public/ask'
   id:
     | '__root__'
     | '/'
     | '/kgm-travels-app'
+    | '/login'
+    | '/mcp'
+    | '/.well-known/oauth-protected-resource'
     | '/projects/electromagnetic-braking'
+    | '/.lovable/oauth/consent'
     | '/api/public/ask'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   KgmTravelsAppRoute: typeof KgmTravelsAppRoute
+  LoginRoute: typeof LoginRoute
+  McpRoute: typeof McpRoute
+  Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   ProjectsElectromagneticBrakingRoute: typeof ProjectsElectromagneticBrakingRoute
+  DotlovableOauthConsentRoute: typeof DotlovableOauthConsentRoute
   ApiPublicAskRoute: typeof ApiPublicAskRoute
 }
 
@@ -99,11 +152,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KgmTravelsAppRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mcp': {
+      id: '/mcp'
+      path: '/mcp'
+      fullPath: '/mcp'
+      preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/oauth-protected-resource': {
+      id: '/.well-known/oauth-protected-resource'
+      path: '/.well-known/oauth-protected-resource'
+      fullPath: '/.well-known/oauth-protected-resource'
+      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/electromagnetic-braking': {
       id: '/projects/electromagnetic-braking'
       path: '/projects/electromagnetic-braking'
       fullPath: '/projects/electromagnetic-braking'
       preLoaderRoute: typeof ProjectsElectromagneticBrakingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.lovable/oauth/consent': {
+      id: '/.lovable/oauth/consent'
+      path: '/.lovable/oauth/consent'
+      fullPath: '/.lovable/oauth/consent'
+      preLoaderRoute: typeof DotlovableOauthConsentRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/ask': {
@@ -119,7 +200,12 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   KgmTravelsAppRoute: KgmTravelsAppRoute,
+  LoginRoute: LoginRoute,
+  McpRoute: McpRoute,
+  Char91DotwellKnownChar93OauthProtectedResourceRoute:
+    Char91DotwellKnownChar93OauthProtectedResourceRoute,
   ProjectsElectromagneticBrakingRoute: ProjectsElectromagneticBrakingRoute,
+  DotlovableOauthConsentRoute: DotlovableOauthConsentRoute,
   ApiPublicAskRoute: ApiPublicAskRoute,
 }
 export const routeTree = rootRouteImport

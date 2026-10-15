@@ -101,16 +101,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "google-site-verification", content: "g_ObmFLAe1PyzvyURp5txNohgoQ1GpyY_FwEQjmuMgw" },
       { name: "google-site-verification", content: "LAAXkXN6WQJQN-fSyBF4G7gheiBK7VaJOWzmI5hM5hM" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Govardhanan P | MBA Student & Mechanical Engineer | Official Portfolio" },
-      { name: "description", content: "Official portfolio of Govardhanan P, an MBA student and Mechanical Engineering graduate showcasing education, skills, projects, certifications, achievements, and professional journey." },
       { name: "author", content: "Govardhanan P" },
       { property: "og:site_name", content: "Govardhanan" },
-      { property: "og:title", content: "Govardhanan P | MBA Student & Mechanical Engineer | Official Portfolio" },
-      { property: "og:description", content: "Official portfolio of Govardhanan P, an MBA student and Mechanical Engineering graduate showcasing education, skills, projects, certifications, achievements, and professional journey." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Govardhanan P | MBA Student & Mechanical Engineer | Official Portfolio" },
-      { name: "twitter:description", content: "Official portfolio of Govardhanan P, an MBA student and Mechanical Engineering graduate showcasing education, skills, projects, certifications, achievements, and professional journey." },
     ],
     links: [
       {

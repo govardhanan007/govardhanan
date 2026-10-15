@@ -38,7 +38,7 @@ function htmlToText(html: string) {
 
 let cache: { at: number; text: string } | null = null;
 
-async function loadPortfolio(origin: string) {
+export async function loadPortfolio(origin: string) {
   if (cache && Date.now() - cache.at < 10 * 60 * 1000) return cache.text;
   const [home, braking] = await Promise.all(
     ["/index.html", "/projects/electromagnetic-braking/index.html"].map((p) =>
