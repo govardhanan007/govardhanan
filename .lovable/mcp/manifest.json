@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "sdk_version": "3.1.0",
+  "path": "/mcp",
+  "auth": {
+    "type": "oauth",
+    "issuer": "https://qooqhqyooxlwtsxpomjo.supabase.co/auth/v1",
+    "require_oauth_client_claim": true,
+    "accepted_audiences": [
+      "authenticated"
+    ]
+  },
+  "mcp": {
+    "server": {
+      "name": "govardhanan-s-professional-presence",
+      "version": "0.1.0",
+      "title": "Govardhanan's Professional Presence"
+    },
+    "tools": [
+      {
+        "name": "get_portfolio",
+        "title": "Get portfolio content",
+        "description": "Return the verified text of Govardhanan P's official portfolio (about, education, experience, skills, projects, certifications, FAQ, contact) with section links.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "search_portfolio",
+        "title": "Search portfolio",
+        "description": "Find portfolio sections of Govardhanan P's website that mention a keyword, returning matching sections with links.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 100,
+              "description": "Keyword to search for, e.g. 'HR', 'Coursera', 'MBA'."
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
