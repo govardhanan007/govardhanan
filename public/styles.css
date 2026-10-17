@@ -253,7 +253,7 @@ a.tile:hover{transform:translateY(-3px);border-color:var(--accent, var(--border)
 /* Brand backgrounds */
 .connect-tile[data-brand="linkedin"] .badge{background:#0A66C2}
 .connect-tile[data-brand="instagram"] .badge{background:transparent;box-shadow:0 4px 10px rgba(214,41,118,.35)}
-.connect-tile[data-brand="instagram"] .badge svg{width:56px;height:56px;border-radius:14px}
+.connect-tile[data-brand="instagram"] .badge svg{width:56px!important;height:56px!important;border-radius:14px}
 .connect-tile[data-brand="facebook"] .badge{background:#0866FF;border-radius:50%}
 .connect-tile[data-brand="facebook"] .badge svg{width:56px;height:56px;border-radius:50%;overflow:hidden}
 .connect-tile[data-brand="gmail"] .badge svg{width:36px;height:27px}
