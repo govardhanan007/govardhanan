@@ -87,7 +87,9 @@ export async function handlePortfolioAsk(request: Request) {
     return Response.json({ error: "Invalid question." }, { status: 400 });
   }
 
-  const content = await loadPortfolio(new URL(request.url).origin);
+  const reqOrigin = new URL(request.url).origin;
+  const allowed = /^(https:\/\/(www\.govardhanan\.com|govardhanan\.com|govardhanan\.lovable\.app|id-preview--c5064703-7d69-49c1-9ece-8865650f8eb2\.lovable\.app)|http:\/\/localhost:\d+)$/;
+  const content = await loadPortfolio(allowed.test(reqOrigin) ? reqOrigin : SITE);
   if (!content) return Response.json({ error: "Portfolio content is unavailable right now." }, { status: 503 });
 
   const runIdFetch = createLovableAiGatewayRunIdFetch(getLovableAiGatewayRunId(request));
