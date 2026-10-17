@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as Char91indexChar93RouteImport } from './routes/[index]'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as KgmTravelsAppRouteImport } from './routes/kgm-travels-app'
 import { Route as LoginRouteImport } from './routes/login'
@@ -18,6 +19,11 @@ import { Route as ProjectsElectromagneticBrakingRouteImport } from './routes/pro
 import { Route as DotlovableOauthConsentRouteImport } from './routes/[.]lovable.oauth.consent'
 import { Route as ApiPublicAskRouteImport } from './routes/api/public/ask'
 
+const Char91indexChar93Route = Char91indexChar93RouteImport.update({
+  id: '/index',
+  path: '/index',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -63,6 +69,7 @@ const ApiPublicAskRoute = ApiPublicAskRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/index': typeof Char91indexChar93Route
   '/kgm-travels-app': typeof KgmTravelsAppRoute
   '/login': typeof LoginRoute
   '/mcp': typeof McpRoute
@@ -73,6 +80,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/index': typeof Char91indexChar93Route
   '/kgm-travels-app': typeof KgmTravelsAppRoute
   '/login': typeof LoginRoute
   '/mcp': typeof McpRoute
@@ -84,6 +92,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/index': typeof Char91indexChar93Route
   '/kgm-travels-app': typeof KgmTravelsAppRoute
   '/login': typeof LoginRoute
   '/mcp': typeof McpRoute
@@ -96,6 +105,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/index'
     | '/kgm-travels-app'
     | '/login'
     | '/mcp'
@@ -106,6 +116,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/index'
     | '/kgm-travels-app'
     | '/login'
     | '/mcp'
@@ -116,6 +127,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/index'
     | '/kgm-travels-app'
     | '/login'
     | '/mcp'
@@ -127,6 +139,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  Char91indexChar93Route: typeof Char91indexChar93Route
   KgmTravelsAppRoute: typeof KgmTravelsAppRoute
   LoginRoute: typeof LoginRoute
   McpRoute: typeof McpRoute
@@ -138,6 +151,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/index': {
+      id: '/index'
+      path: '/index'
+      fullPath: '/index'
+      preLoaderRoute: typeof Char91indexChar93RouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -199,6 +219,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  Char91indexChar93Route: Char91indexChar93Route,
   KgmTravelsAppRoute: KgmTravelsAppRoute,
   LoginRoute: LoginRoute,
   McpRoute: McpRoute,
