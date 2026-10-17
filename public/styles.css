@@ -245,7 +245,7 @@ a.tile:hover{transform:translateY(-3px);border-color:var(--accent, var(--border)
 @media (max-width:480px){.connect-grid{grid-template-columns:repeat(3,1fr);gap:12px}}
 .connect-tile{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:12px;padding:20px 12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);color:var(--text);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;min-height:130px;text-decoration:none}
 .connect-tile:hover{transform:translateY(-4px);box-shadow:var(--shadow);text-decoration:none;color:var(--text)}
-.connect-tile .badge{width:56px;height:56px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,.14),inset 0 1px 0 rgba(255,255,255,.18);transition:transform .25s ease;flex:none}
+.connect-tile .badge{padding:0;margin:0;width:56px;height:56px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,.14),inset 0 1px 0 rgba(255,255,255,.18);transition:transform .25s ease;flex:none}
 .connect-tile:hover .badge{transform:scale(1.06) rotate(-2deg)}
 .connect-tile .badge svg{width:34px;height:34px;display:block}
 .connect-tile .label{font-size:.86rem;font-weight:600;color:var(--text);text-align:center;line-height:1.2}
@@ -253,8 +253,10 @@ a.tile:hover{transform:translateY(-3px);border-color:var(--accent, var(--border)
 /* Brand backgrounds */
 .connect-tile[data-brand="linkedin"] .badge{background:#0A66C2}
 .connect-tile[data-brand="instagram"] .badge{background:transparent;box-shadow:0 4px 10px rgba(214,41,118,.35)}
-.connect-tile[data-brand="instagram"] .badge svg{width:56px;height:56px;border-radius:14px}
-.connect-tile[data-brand="facebook"] .badge{background:#1877F2}
+.connect-tile[data-brand="instagram"] .badge svg{width:56px!important;height:56px!important;border-radius:14px}
+.connect-tile[data-brand="facebook"] .badge{background:#0866FF;border-radius:50%}
+.connect-tile[data-brand="facebook"] .badge svg{width:56px;height:56px;border-radius:50%;overflow:hidden}
+.connect-tile[data-brand="gmail"] .badge svg{width:36px;height:27px}
 .connect-tile[data-brand="x"] .badge{background:#000}
 .connect-tile[data-brand="whatsapp"] .badge{background:#25D366}
 .connect-tile[data-brand="telegram"] .badge{background:linear-gradient(180deg,#37AEE2,#1E96C8)}
