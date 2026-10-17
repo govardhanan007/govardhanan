@@ -119,11 +119,20 @@
     var last = log.lastChild;
     last.innerHTML = '<p class="gp-ask-typing"><span></span><span></span><span></span></p>';
 
-    fetch("/api/public/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ messages: history }) })
+    var token = "";
+    try {
+      var s = JSON.parse(localStorage.getItem("sb-qooqhqyooxlwtsxpomjo-auth-token") || "null");
+      token = (s && (s.access_token || (s.currentSession && s.currentSession.access_token))) || "";
+    } catch (e) {}
+    var loginLink = "[Sign in](/login?next=" + encodeURIComponent(location.pathname + "#connect") + ")";
+    var headers = { "Content-Type": "application/json" };
+    if (token) headers.Authorization = "Bearer " + token;
+    fetch("/api/public/ask", { method: "POST", headers: headers, body: JSON.stringify({ messages: history }) })
       .then(function (res) {
         if (!res.ok) {
           return res.json().catch(function () { return {}; }).then(function (j) {
-            var msg = res.status === 429 ? "Too many questions right now — please try again in a moment." :
+            var msg = res.status === 401 ? "Please " + loginLink + " to ask questions about Govardhanan P." :
+              res.status === 429 ? "Too many questions right now — please try again in a moment." :
               res.status === 402 ? "The assistant is temporarily unavailable." :
               (j && j.error) || "Sorry, something went wrong. Please try again.";
             throw new Error(msg);

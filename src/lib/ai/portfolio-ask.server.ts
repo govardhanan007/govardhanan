@@ -80,6 +80,21 @@ export async function handlePortfolioAsk(request: Request) {
   const apiKey = process.env.LOVABLE_API_KEY;
   if (!apiKey) return Response.json({ error: "The assistant is not configured." }, { status: 500 });
 
+  // Require a signed-in user so strangers can't spend the AI allowance.
+  const auth = request.headers.get("authorization") ?? "";
+  const token = auth.startsWith("Bearer ") ? auth.slice(7) : "";
+  if (!token || token.split(".").length !== 3) {
+    return Response.json({ error: "Please sign in to ask questions." }, { status: 401 });
+  }
+  const { createClient } = await import("@supabase/supabase-js");
+  const sb = createClient(process.env.SUPABASE_URL!, process.env.SUPABASE_PUBLISHABLE_KEY!, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
+  const { data: claims, error: authErr } = await sb.auth.getClaims(token);
+  if (authErr || !claims?.claims?.sub) {
+    return Response.json({ error: "Please sign in to ask questions." }, { status: 401 });
+  }
+
   let parsed;
   try {
     parsed = bodySchema.parse(await request.json());
