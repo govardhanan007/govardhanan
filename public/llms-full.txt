@@ -9,10 +9,10 @@ Govardhanan P is an MBA (General) student at the Faculty of Management Studies, 
 - 2025–2027: Master of Business Administration (MBA – General), pursuing — Faculty of Management Studies, Dr. M.G.R. Educational and Research Institute, Chennai
 - 2022–2025: B.Tech Mechanical Engineering — Dr. M.G.R. Educational and Research Institute, Chennai — 68.47%
 - 2019–2022: Diploma in Tool Engineering & Digital Manufacturing — NTTF, Vellore — CGPA 7.63
-- 2018–2019: SSLC — Bharathi Matriculation Higher Secondary School, Maduravoyal, Chennai — 70.8%
+- 2019: SSLC — Bharathi Matriculation Higher Secondary School, Maduravoyal, Chennai — 354/500 (70.8%)
 
 ## Experience
-### HR Intern — Textspeed Technology Pvt. Ltd.
+### Human Resources Intern — Textspeed Technology Pvt. Ltd., Aminjikarai, Chennai – 600030 (14–29 August 2026, 15-day internship, completed)
 Exposure to recruitment and selection, support for talent acquisition, employee onboarding, attendance and leave management records, HR documentation, employee engagement activities and professional workplace communication.
 
 ### Operations Assistant — KGM Travels (family business), school transportation services, Chennai
@@ -22,30 +22,26 @@ Day-to-day operations, vehicle scheduling, route planning, parent communication 
 - Automatic Electromagnetic Braking System: contactless eddy-current braking using an electromagnet, mild-steel disc, ultrasonic sensor, relay module and Arduino microcontroller; modelled in AutoCAD and SolidWorks. Bench demonstration of automatic deceleration when an obstacle enters sensor range. Case study: https://www.govardhanan.com/projects/electromagnetic-braking
 - MBA summer project: "A Study on Business and Digital Marketing Practices of Textspeed Technology Private Limited (A Website-Based Observational Study)" — sole student author.
 
-## Skills
-- Human Resources: recruitment, employee relations, HR operations
-- Business & Management: business management, operations management, project coordination
-- Technical: CAD (AutoCAD, SolidWorks), CAM, tool engineering, digital manufacturing
-- Software: Microsoft Excel, PowerPoint, Word
-- Professional: leadership, communication, teamwork, problem solving, time management, critical thinking, adaptability, continuous learning
+## Skills (53, from LinkedIn)
+- Human Resources: HR Management, HR Policies, HR Administration, HR Operations, Strategic Human Resource Planning, Human Resources (HR)
+- Talent Acquisition: Recruiting, Hiring, Candidate Selection, Interviewing, Onboarding, Talent Management, Employer Branding
+- Employee Management: Employee Engagement, Employee Lifecycle Management, Employee Training, Career Development, People Management, Performance Management, Performance Feedback, Employee Evaluation, Coaching, Conflict Management, Goal Setting
+- Compensation and Rewards: Compensation Management, Rewards Strategy, Total Rewards Strategies, Employee Benefits, Pay Equity
+- Communication and Teamwork: Professional Communication, Active Listening, Teamwork, Group Communication, Interpersonal Skills, Face-to-face Communication, Team Leadership
+- Artificial Intelligence: Artificial Intelligence (AI), Prompt Engineering, Generative AI, Responsible AI
+- Marketing: Marketing Strategy, Public Engagement, Content Marketing, Social Media, Social Media Strategy, Digital Marketing, Digital Strategy, Social Media Marketing, Content Strategy
+- Other: Credit Risk Management, Accounts Receivable (AR), Professional Skills, Mechanical Engineering
+- Software: Microsoft Excel (basic), Microsoft PowerPoint (intermediate)
 
-## Certifications (Coursera)
-1. Introduction to Social Media Marketing — Meta — Aug 26, 2026 — ID 125GEA5APF6X
-2. Generative AI: Prompt Engineering Basics — IBM — ID 009KIW97ZQU4
-3. Generative AI: Introduction and Applications — IBM — Jul 27, 2026 — ID L4HQKM1IKJOB
-4. Human Resource Management: HR for People Managers (Specialization) — University of Minnesota
-5. Foundations of HR Operations — HRCI — Jul 18, 2026 — ID 7SVOSCCR0N9Q
-6. Total Rewards and Employee Development — HRCI — Jul 24, 2026 — ID R141MCHUVWGW
-7. Talent Acquisition and Onboarding — HRCI — Jul 25, 2026 — ID PNCEKXMCL97T
-8. Employee Relations, Safety, and Compliance — HRCI — Jul 27, 2026 — ID NHKDGCPBKIR5
-9. Preparing to Manage Human Resources — University of Minnesota — ID K6IV1BOD9PI8
-10. Managing Employee Performance — University of Minnesota — ID MZF4P2JWJ0WY
-11. Managing Employee Compensation — University of Minnesota — ID IEBU600XTNTO
-12. Recruiting, Hiring, and Onboarding Employees — University of Minnesota — ID 6636AR5VQ9MK
-13. Human Resources Management Capstone: HR for People Managers — University of Minnesota — ID 7G0I3P6EOOJF
-14. Leading Through Effective Communication — Arizona State University — Aug 5, 2026 — ID RYZ6CJ6UNWZL
-15. Professional Skills: Leading Through Effective Communication — Arizona State University — ID OPG5D5F1MV2H
-16. Teamwork Skills: Communicating Effectively in Groups — University of Colorado Boulder — ID IRGGN1IHOI5P
+## Languages
+- Tamil: native or bilingual proficiency
+- English: limited working proficiency
+
+## Certifications (25)
+HR and Talent Acquisition: Foundations of HR Operations (HRCI, Jul 2026, 7SVOSCCR0N9Q); Total Rewards and Employee Development (HRCI, Jul 2026, R141MCHUVWGW); Talent Acquisition and Onboarding (HRCI, Jun 2026, PNCEKXMCL97T); Employee Relations, Safety, and Compliance (HRCI, Jul 2026, NHKDGCPBKIR5); Human Resource Management: HR for People Managers (University of Minnesota, Jul 2026, FCNJAOCSFTSF); Preparing to Manage Human Resources (University of Minnesota, Jul 2026, K6IV1BOD9PI8); Managing Employee Performance (MZF4P2JWJ0WY); Managing Employee Compensation (IEBU600XTNTO); Recruiting, Hiring, and Onboarding Employees (6636AR5VQ9MK); Human Resources Management Capstone: HR for People Managers (7G0I3P6EOOJF) — all University of Minnesota, Jul 2026.
+AI and Generative AI: AI Foundations (OpenAI, Sep 2026, cf3nag86dq); Anthropic Claude Academy, Sep 2026: Claude 101, Claude Code 101, Introduction to Claude Cowork, Claude Platform 101, Claude Code in Action, Introduction to Model Context Protocol, Model Context Protocol: Advanced Topics, AI Fluency for students; IBM: Generative AI: Prompt Engineering Basics (Aug 2026, 009KIW97ZQU4), Generative AI: Introduction and Applications (Jul 2026, L4HQKM1IKJOB).
+Digital Marketing: Introduction to Social Media Marketing (Meta, Aug 2026, 125GEA5APF6X).
+Communication and Teamwork: Professional Skills: Leading Through Effective Communication (Arizona State University, Apr 2026, OPG5D5F1MV2H); Leading Through Effective Communication (Arizona State University, Aug 2026, RYZ6CJ6UNWZL); Teamwork Skills: Communicating Effectively in Groups (University of Colorado Boulder, Dec 2025, IRGGN1IHOI5P).
 Verification links: https://www.govardhanan.com/#certifications
 
 ## Career vision
@@ -54,7 +50,7 @@ Grow into business leadership roles; drive innovation; strategic thinking; organ
 ## Contact & official profiles
 - Website: https://www.govardhanan.com
 - Resume: https://www.govardhanan.com/assets/resume.pdf
-- LinkedIn: https://www.linkedin.com/in/pgovardhanan
+- LinkedIn: https://www.linkedin.com/in/govardhanan1723/
 - GitHub: https://github.com/govardhanan007
 - X: https://x.com/Govardhanan007
 - Instagram: https://www.instagram.com/govardhanan1723

@@ -102,7 +102,7 @@ export const Route = createFileRoute("/")({
                 "Business Communication"
               ],
               "sameAs": [
-                "https://www.linkedin.com/in/pgovardhanan",
+                "https://www.linkedin.com/in/govardhanan1723/",
                 "https://www.instagram.com/govardhanan1723",
                 "https://www.facebook.com/share/17dsqmsyUM/",
                 "https://x.com/Govardhanan007",
