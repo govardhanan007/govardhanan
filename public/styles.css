@@ -161,7 +161,7 @@ html[data-theme="dark"] .theme-toggle .moon{display:none}
 #skills .section-head{margin-bottom:28px}
 .skills-groups{display:grid;gap:36px}
 .skill-group .group-title{display:flex;align-items:center;gap:14px;margin:0 0 16px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700}
-.skill-group .group-title span{flex:none}
+.skill-group .group-title span{flex:0 1 auto;min-width:0}
 .skill-group .group-title::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--border),transparent)}
 .skill-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
 .skill-grid .skill-card{display:flex;flex-direction:column;min-height:150px}
