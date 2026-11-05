@@ -127,7 +127,8 @@
     var loginLink = "[Sign in](/login?next=" + encodeURIComponent(location.pathname + "#connect") + ")";
     var headers = { "Content-Type": "application/json" };
     if (token) headers.Authorization = "Bearer " + token;
-    fetch("/api/public/ask", { method: "POST", headers: headers, body: JSON.stringify({ messages: history }) })
+    var askUrl = /lovable\.app$|^localhost$|^127\./.test(location.hostname) ? "/api/public/ask" : "https://govardhanan.lovable.app/api/public/ask";
+    fetch(askUrl, { method: "POST", headers: headers, body: JSON.stringify({ messages: history }) })
       .then(function (res) {
         if (!res.ok) {
           return res.json().catch(function () { return {}; }).then(function (j) {

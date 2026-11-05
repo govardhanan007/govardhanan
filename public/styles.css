@@ -398,7 +398,9 @@ html[data-theme="dark"] .site-footer{background:#020914;border-top:1px solid var
 @media (max-width:640px){.gp-ask{right:12px;bottom:12px}.gp-ask-fab span{display:none}.gp-ask-fab{padding:14px}.gp-ask-panel{height:calc(100vh - 80px)}}
 
 /* Justified narrative paragraphs */
-#about p,.section-head p,.edu-card .inst,.exp-duties li,.project-card p,.detail p,.vision-card p,#faq p,.skill-card .desc,.footer-brand p,.prose p{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+/* Natural left alignment, no word splitting (justify created uneven gaps) */
+#about p,.section-head p,.edu-card .inst,.exp-duties li,.project-card p,.detail p,.vision-card p,#faq p,.skill-card .desc,.footer-brand p,.prose p{text-align:start;hyphens:manual;-webkit-hyphens:manual;overflow-wrap:break-word}
+@media (min-width:1024px){#about .about-text>p,.vision-card p,.prose p{text-align:justify;text-justify:inter-word}}
 .about-links,.resume-actions,.kgm-app-note,.kgm-wrap p,.resume-card p,.cert-card p{text-align:inherit}
 
 .gp-ask-avatar{width:28px;height:28px;border-radius:50%;object-fit:cover;flex:none;border:2px solid rgba(255,255,255,.8)}
