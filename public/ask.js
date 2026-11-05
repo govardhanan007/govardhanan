@@ -41,10 +41,10 @@
   root.className = "gp-ask";
   root.innerHTML =
     '<button type="button" class="gp-ask-fab" aria-expanded="false" aria-controls="gp-ask-panel">' +
-      '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>' +
+      '<img class="gp-ask-avatar" src="/assets/photo.jpg" alt="" width="28" height="28" />' +
       "<span>Ask about Govardhanan</span></button>" +
     '<section id="gp-ask-panel" class="gp-ask-panel" role="dialog" aria-label="Ask about Govardhanan P" hidden>' +
-      '<header class="gp-ask-head"><div><strong>Ask about Govardhanan P</strong><small>AI answers from verified portfolio content only</small></div>' +
+      '<header class="gp-ask-head"><img class="gp-ask-avatar" src="/assets/photo.jpg" alt="Govardhanan P" width="36" height="36" /><div class="gp-ask-title"><strong>Ask about Govardhanan P</strong><small>AI answers from verified portfolio content only</small></div>' +
         '<div class="gp-ask-head-actions"><button type="button" class="gp-ask-clear">Clear</button>' +
         '<button type="button" class="gp-ask-close" aria-label="Close">×</button></div></header>' +
       '<div class="gp-ask-log" aria-live="polite"></div>' +

@@ -400,3 +400,9 @@ html[data-theme="dark"] .site-footer{background:#020914;border-top:1px solid var
 /* Justified narrative paragraphs */
 #about p,.section-head p,.edu-card .inst,.exp-duties li,.project-card p,.detail p,.vision-card p,#faq p,.skill-card .desc,.footer-brand p,.prose p{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
 .about-links,.resume-actions,.kgm-app-note,.kgm-wrap p,.resume-card p,.cert-card p{text-align:inherit}
+
+.gp-ask-avatar{width:28px;height:28px;border-radius:50%;object-fit:cover;flex:none;border:2px solid rgba(255,255,255,.8)}
+.gp-ask-head .gp-ask-avatar{width:36px;height:36px;border-color:var(--border)}
+.gp-ask-title{flex:1;min-width:0}
+.gp-ask-fab{padding-left:8px}
+@media (max-width:640px){.gp-ask-fab{padding:8px}.gp-ask-fab .gp-ask-avatar{width:36px;height:36px}}
