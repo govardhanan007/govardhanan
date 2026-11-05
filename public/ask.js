@@ -49,7 +49,7 @@
         '<button type="button" class="gp-ask-close" aria-label="Close">×</button></div></header>' +
       '<div class="gp-ask-log" aria-live="polite"></div>' +
       '<div class="gp-ask-suggest"></div>' +
-      '<form class="gp-ask-form"><textarea rows="1" maxlength="1000" placeholder="e.g. What HR experience does he have?" aria-label="Your question"></textarea>' +
+      '<form class="gp-ask-form"><textarea rows="1" maxlength="1000" placeholder="Type your question…" aria-label="Your question"></textarea>' +
         '<button type="submit" aria-label="Send">' +
         '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg></button></form>' +
     "</section>";
@@ -63,7 +63,7 @@
   var sendBtn = form.querySelector("button");
   var suggest = root.querySelector(".gp-ask-suggest");
 
-  ["What is his education?", "Describe his HR experience", "Which certifications does he hold?", "How can I contact him?"].forEach(function (q) {
+  ["What is his education?", "Which certifications does he hold?", "How can I contact him?"].forEach(function (q) {
     var b = document.createElement("button");
     b.type = "button"; b.textContent = q;
     b.addEventListener("click", function () { ask(q); });
