@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { handlePortfolioAsk } from "@/lib/ai/portfolio-ask.server";
 
 const ALLOWED = new Set([
   "https://www.govardhanan.com",
@@ -21,13 +20,8 @@ function cors(request: Request): Record<string, string> {
 export const Route = createFileRoute("/api/public/ask")({
   server: {
     handlers: {
-      OPTIONS: ({ request }) => new Response(null, { status: 204, headers: cors(request) }),
-      POST: async ({ request }) => {
-        const res = await handlePortfolioAsk(request);
-        const headers = new Headers(res.headers);
-        for (const [k, v] of Object.entries(cors(request))) headers.set(k, v);
-        return new Response(res.body, { status: res.status, headers });
-      },
+      OPTIONS: () => new Response(null, { status: 204 }),
+      POST: () => Response.json({ error: "The assistant is unavailable." }, { status: 410 }),
     },
   },
 });
