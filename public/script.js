@@ -87,3 +87,19 @@
     }
   });
 })();
+/* Issuer logos: one central map. Add a file to /assets/logos/ and list it here;
+   cards without a logo keep a clean text badge with the issuer name. */
+(function () {
+  var issuerLogoMap = {
+    // "hrci": "/assets/logos/hrci.svg",
+  };
+  document.querySelectorAll('.issuer-logo[data-issuer]').forEach(function (el) {
+    var src = issuerLogoMap[el.getAttribute('data-issuer')];
+    if (!src || el.querySelector('img')) return;
+    var img = new Image();
+    img.alt = (el.getAttribute('data-name') || '') + ' logo';
+    img.loading = 'lazy'; img.decoding = 'async';
+    img.onload = function () { el.textContent = ''; el.appendChild(img); el.classList.add('has-img'); };
+    img.src = src;
+  });
+})();
