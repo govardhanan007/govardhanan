@@ -1,8 +1,10 @@
-import { createFileRoute, redirect } from "@tanstack/react-router";
+import { createFileRoute, Navigate } from "@tanstack/react-router";
 
-// Old/alternate address "/index" — always send visitors to the homepage.
+// Old/alternate address "/index" — send visitors to the homepage (works in the preview too).
 export const Route = createFileRoute("/index")({
-  beforeLoad: () => {
-    throw redirect({ to: "/", statusCode: 301 });
-  },
+  head: () => ({
+    meta: [{ name: "robots", content: "noindex" }],
+    links: [{ rel: "canonical", href: "https://www.govardhanan.com/" }],
+  }),
+  component: () => <Navigate to="/" replace />,
 });
