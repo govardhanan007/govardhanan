@@ -87,19 +87,50 @@
     }
   });
 })();
-/* Issuer logos: one central map. Add a file to /assets/logos/ and list it here;
-   cards without a logo keep a clean text badge with the issuer name. */
+/* Issuer logos: one central map to managed asset pointers. Keep the issuer name
+   visible as a fallback whenever a pointer or image cannot be loaded. */
 (function () {
   var issuerLogoMap = {
-    // "hrci": "/assets/logos/hrci.svg",
+    "hrci": "/assets/logos/hrci.png.asset.json",
+    "university-of-minnesota": "/assets/logos/university-of-minnesota.jpg.asset.json",
+    "openai": "/assets/logos/openai.png.asset.json",
+    "anthropic": "/assets/logos/anthropic.svg.asset.json",
+    "ibm": "/assets/logos/ibm.png.asset.json",
+    "meta": "/assets/logos/meta.png.asset.json",
+    "arizona-state-university": "/assets/logos/arizona-state-university.jpeg.asset.json",
+    "cu-boulder": "/assets/logos/colorado-boulder.png.asset.json",
   };
-  document.querySelectorAll('.issuer-logo[data-issuer]').forEach(function (el) {
-    var src = issuerLogoMap[el.getAttribute('data-issuer')];
-    if (!src || el.querySelector('img')) return;
-    var img = new Image();
-    img.alt = (el.getAttribute('data-name') || '') + ' logo';
-    img.loading = 'lazy'; img.decoding = 'async';
-    img.onload = function () { el.textContent = ''; el.appendChild(img); el.classList.add('has-img'); };
-    img.src = src;
-  });
+  var pointerRequests = {};
+  var processedBadges = new WeakSet();
+  var loadIssuerLogo = function (el) {
+    if (processedBadges.has(el)) return;
+    var pointerPath = issuerLogoMap[el.getAttribute('data-issuer')];
+    if (!pointerPath || el.querySelector('img')) return;
+    processedBadges.add(el);
+    if (!pointerRequests[pointerPath]) {
+      pointerRequests[pointerPath] = fetch(pointerPath)
+        .then(function (response) { return response.ok ? response.json() : null; })
+        .then(function (pointer) { return pointer && typeof pointer.url === 'string' ? pointer.url : null; })
+        .catch(function () { return null; });
+    }
+    pointerRequests[pointerPath].then(function (src) {
+      if (!src || !el.isConnected || el.querySelector('img')) return;
+      var img = new Image();
+      img.alt = (el.getAttribute('data-name') || '') + ' logo';
+      img.loading = 'lazy'; img.decoding = 'async';
+      img.onload = function () { el.textContent = ''; el.appendChild(img); el.classList.add('has-img'); };
+      img.src = src;
+    });
+  };
+  var loadIssuerLogos = function (root) {
+    if (root.nodeType !== 1) return;
+    if (root.matches('.issuer-logo[data-issuer]')) loadIssuerLogo(root);
+    root.querySelectorAll('.issuer-logo[data-issuer]').forEach(loadIssuerLogo);
+  };
+  loadIssuerLogos(document.documentElement);
+  new MutationObserver(function (records) {
+    records.forEach(function (record) {
+      record.addedNodes.forEach(loadIssuerLogos);
+    });
+  }).observe(document.documentElement, { childList: true, subtree: true });
 })();
