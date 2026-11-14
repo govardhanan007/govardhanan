@@ -117,7 +117,7 @@
       if (!src || !el.isConnected || el.querySelector('img')) return;
       var img = new Image();
       img.alt = (el.getAttribute('data-name') || '') + ' logo';
-      img.loading = 'lazy'; img.decoding = 'async';
+      img.loading = 'eager'; img.decoding = 'async';
       img.onload = function () { el.textContent = ''; el.appendChild(img); el.classList.add('has-img'); };
       img.src = src;
     });
